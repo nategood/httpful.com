@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Httpful</title>
@@ -105,7 +106,7 @@
                     IDEAL FOR: Everything else, especially projects that already include a PSR-0 autoloader
                 </p>
                 <p class="note">
-                Httpful also supports the PSR-0 standard.  If your project already includes a PSR-0 compliant autoloader, just drop Httpful in your vendor library.  
+                Httpful supports the PSR-0 standard.  If your project already includes a PSR-0 compliant autoloader, just drop Httpful in your vendor library.  
                 </p>
                 <pre class="brush:shell">
                     # Clone the repo
@@ -137,8 +138,7 @@
                 </p>
                 <pre class="brush: php">
                     $uri = "https://www.googleapis.com/freebase/v1/mqlread?query=%7B%22type%22:%22/music/artist%22%2C%22name%22:%22The%20Dead%20Weather%22%2C%22album%22:%5B%5D%7D";
-                    $response = \Httpful\Request::get($uri)
-                        ->send();
+                    $response = Request::get($uri)->send();
 
                     echo 'The Dead Weather has ' . count($response->body->result->album) . " albums.\n";
                 </pre>
@@ -192,7 +192,7 @@
                     The library automatically serializes our body (associative hash) into valid JSON (if we specified a specific JSON string, it would skip this serialization step).
                 </p>
                 <pre class="brush: php">
-                    $response = \Httpful\Request::put($uri)         // Build a PUT request...
+                    $response = Request::put($uri)         // Build a PUT request...
                         ->sendsJson()                               // tell it we're sending (Content-Type) JSON...
                         ->authenticateWith('username', 'password')  // authenticate with basic auth...
                         ->body('{"json":"is awesome"}')             // attach a body/payload...
@@ -210,7 +210,7 @@
                     $crt        = '/path/to/client/crt.pem';
                     $passphrase = 'for-your-key-if-needed';
 
-                    $response = \Httpful\Request::get($uri)
+                    $response = Request::get($uri)
                         ->authenticateWithCert($cert, $key, $passphrase)
                         ->send();
                 </pre>
@@ -225,7 +225,7 @@
                     Httpful supports a clean, readable syntax for specifying custom request headers.  The preferred syntax is to just add the header as an instance method call (e.g. xExampleHeader() or withXExampleHeader()).  Httpful also supports adding headers via addHeader method, or multiple headers at once via the addHeaders method.
                 </p>
                 <pre class="brush: php">
-                    $response = \Httpful\Request::get($uri)
+                    $response = Request::get($uri)
                         ->xExampleHeader("My Value")                // Add in a custom header X-Example-Header
                         ->withXAnotherHeader("Another Value")       // Sugar: You can also prefix the method with "with"
                         ->addHeader('X-Or-This', 'Header Value')    // Or use the addHeader method
@@ -248,7 +248,7 @@
                 <pre class="brush: php">
                     // Attach our own handler that could naively parse comma 
                     // separated values into an array
-                    $response = \Httpful\Request::get($uri)
+                    $response = Request::get($uri)
                         ->parseWith(function($body) {
                             return explode(",", $body);
                         })
@@ -268,7 +268,7 @@
                 </p>
                 <pre class="brush: php">
                     // Create the template
-                    $template = \Httpful\Request::init()
+                    $template = Request::init()
                         ->method(\Httpful\Http::POST)     // Alternative to Request::post
                         ->withoutStrictSsl()              // Ease up on some of the SSL checks
                         ->expectsHtml()                   // Expect HTML responses
@@ -281,7 +281,7 @@
                     // of our template by default.  We can override
                     // any of these settings by settings them on this 
                     // new instance as we've done with expected type.
-                    $r = \Httpful\Request::get($uri)->expectsJson();
+                    $r = Request::get($uri)->expectsJson();
                 </pre>
             </div>
  
@@ -290,12 +290,6 @@
         <script type="text/javascript" src="js/jquery.lettering-0.6.1.min.js"></script>
         <script type="text/javascript">
             $("#h").lettering();
-            // $("#h span").mouseenter(function() {
-            //     $(this).css('font-weight', 'bold');
-            // }).mouseleave(function() {
-            //     $(this).css('font-weight', 'normal');
-            // });
-            
             SyntaxHighlighter.all();
         </script>
 
