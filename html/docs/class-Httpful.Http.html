@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.5.0" />
+
+	<title>Class Httpful\Http</title>
+
+	<script type="text/javascript" src="resources/combined.js?2300626518"></script>
+	<script type="text/javascript" src="elementlist.js?1107832092"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1252480456" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-Httpful.html">Httpful</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Httpful.Bootstrap.html">Bootstrap</a></li>
+				<li class="active"><a href="class-Httpful.Http.html">Http</a></li>
+				<li><a href="class-Httpful.Mime.html">Mime</a></li>
+				<li><a href="class-Httpful.Request.html">Request</a></li>
+				<li><a href="class-Httpful.Response.html">Response</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Httpful.html" title="Summary of Httpful"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Http</h1>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Httpful.html">Httpful</a><br />
+
+				<b>Author:</b>
+				Nate Good &lt;<a
+href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-Httpful.Http.html#5" title="Go to source code">Httpful/Http.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="safeMethods" id="_safeMethods">
+
+		<td class="attributes"><code>
+			
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_safeMethods">#</a>
+		<code><a href="source-class-Httpful.Http.html#18" title="Go to source code">safeMethods</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>of HTTP method strings<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isSafeMethod" id="_isSafeMethod">
+
+		<td class="attributes"><code>
+			
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isSafeMethod">#</a>
+		<code><a href="source-class-Httpful.Http.html#26" title="Go to source code">isSafeMethod</a>( <span>string <var>$method</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd><code>string</code><br>HTTP method</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isUnsafeMethod" id="_isUnsafeMethod">
+
+		<td class="attributes"><code>
+			
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isUnsafeMethod">#</a>
+		<code><a href="source-class-Httpful.Http.html#35" title="Go to source code">isUnsafeMethod</a>( <span>string <var>$method</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd><code>string</code><br>HTTP method</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="idempotentMethods" id="_idempotentMethods">
+
+		<td class="attributes"><code>
+			
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_idempotentMethods">#</a>
+		<code><a href="source-class-Httpful.Http.html#44" title="Go to source code">idempotentMethods</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>list of (always) idempotent HTTP methods<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isIdempotent" id="_isIdempotent">
+
+		<td class="attributes"><code>
+			
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isIdempotent">#</a>
+		<code><a href="source-class-Httpful.Http.html#55" title="Go to source code">isIdempotent</a>( <span>string <var>$method</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd><code>string</code><br>HTTP method</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isNotIdempotent" id="_isNotIdempotent">
+
+		<td class="attributes"><code>
+			
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isNotIdempotent">#</a>
+		<code><a href="source-class-Httpful.Http.html#64" title="Go to source code">isNotIdempotent</a>( <span>string <var>$method</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$method</var></dt>
+					<dd><code>string</code><br>HTTP method</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="canHaveBody" id="_canHaveBody">
+
+		<td class="attributes"><code>
+			
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_canHaveBody">#</a>
+		<code><a href="source-class-Httpful.Http.html#73" title="Go to source code">canHaveBody</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>of HTTP method strings<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="HEAD" id="HEAD">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Httpful.Http.html#10" title="Go to source code"><b>HEAD</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'HEAD'</span></code></td>
+		<td class="description"><div>
+			<a href="#HEAD" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="GET" id="GET">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Httpful.Http.html#11" title="Go to source code"><b>GET</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'GET'</span></code></td>
+		<td class="description"><div>
+			<a href="#GET" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="POST" id="POST">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Httpful.Http.html#12" title="Go to source code"><b>POST</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'POST'</span></code></td>
+		<td class="description"><div>
+			<a href="#POST" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="PUT" id="PUT">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Httpful.Http.html#13" title="Go to source code"><b>PUT</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'PUT'</span></code></td>
+		<td class="description"><div>
+			<a href="#PUT" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="DELETE" id="DELETE">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Httpful.Http.html#14" title="Go to source code"><b>DELETE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'DELETE'</span></code></td>
+		<td class="description"><div>
+			<a href="#DELETE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="OPTIONS" id="OPTIONS">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Httpful.Http.html#15" title="Go to source code"><b>OPTIONS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'OPTIONS'</span></code></td>
+		<td class="description"><div>
+			<a href="#OPTIONS" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="TRACE" id="TRACE">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Httpful.Http.html#16" title="Go to source code"><b>TRACE</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'TRACE'</span></code></td>
+		<td class="description"><div>
+			<a href="#TRACE" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.5.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

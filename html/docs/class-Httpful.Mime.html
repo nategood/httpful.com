@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.5.0" />
+
+	<title>Class Httpful\Mime</title>
+
+	<script type="text/javascript" src="resources/combined.js?2300626518"></script>
+	<script type="text/javascript" src="elementlist.js?1107832092"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1252480456" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-Httpful.html">Httpful</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Httpful.Bootstrap.html">Bootstrap</a></li>
+				<li><a href="class-Httpful.Http.html">Http</a></li>
+				<li class="active"><a href="class-Httpful.Mime.html">Mime</a></li>
+				<li><a href="class-Httpful.Request.html">Request</a></li>
+				<li><a href="class-Httpful.Response.html">Response</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Httpful.html" title="Summary of Httpful"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Mime</h1>
+
+	<div class="description">
+	
+<p>Class to organize the Mime stuff a bit more</p>
+
+	</div>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Httpful.html">Httpful</a><br />
+
+				<b>Author:</b>
+				Nate Good &lt;<a
+href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-Httpful.Mime.html#5" title="Go to source code">Httpful/Mime.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getFullMime" id="_getFullMime">
+
+		<td class="attributes"><code>
+			
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFullMime">#</a>
+		<code><a href="source-class-Httpful.Mime.html#35" title="Go to source code">getFullMime</a>( <span>string <var>$short_name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get the full Mime Type name from a "short name". Returns the short if no
+mapping was found.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the full Mime Type name from a "short name". Returns the short if no
+mapping was found.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$short_name</var></dt>
+					<dd><code>string</code><br>common name for mime type (e.g. json)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>full mime type (e.g. application/json)<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="supportsMimeType" id="_supportsMimeType">
+
+		<td class="attributes"><code>
+			
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_supportsMimeType">#</a>
+		<code><a href="source-class-Httpful.Mime.html#46" title="Go to source code">supportsMimeType</a>( <span>string <var>$short_name</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$short_name</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="JSON" id="JSON">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Httpful.Mime.html#11" title="Go to source code"><b>JSON</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'application/json'</span></code></td>
+		<td class="description"><div>
+			<a href="#JSON" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="XML" id="XML">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Httpful.Mime.html#12" title="Go to source code"><b>XML</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'application/xml'</span></code></td>
+		<td class="description"><div>
+			<a href="#XML" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="FORM" id="FORM">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Httpful.Mime.html#13" title="Go to source code"><b>FORM</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'application/x-www-form-urlencoded'</span></code></td>
+		<td class="description"><div>
+			<a href="#FORM" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="PLAIN" id="PLAIN">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Httpful.Mime.html#14" title="Go to source code"><b>PLAIN</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'text/plain'</span></code></td>
+		<td class="description"><div>
+			<a href="#PLAIN" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="JS" id="JS">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Httpful.Mime.html#15" title="Go to source code"><b>JS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'text/javascript'</span></code></td>
+		<td class="description"><div>
+			<a href="#JS" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="HTML" id="HTML">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Httpful.Mime.html#16" title="Go to source code"><b>HTML</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'text/html'</span></code></td>
+		<td class="description"><div>
+			<a href="#HTML" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="YAML" id="YAML">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Httpful.Mime.html#17" title="Go to source code"><b>YAML</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'application/x-yaml'</span></code></td>
+		<td class="description"><div>
+			<a href="#YAML" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="mimes" id="$mimes">
+
+		<td class="attributes"><code>
+			
+			public static
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Httpful.Mime.html#19" title="Go to source code"><var>$mimes</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+    <span class="php-quote">'json'</span>      =&gt; self::JSON,
+    <span class="php-quote">'xml'</span>       =&gt; self::XML,
+    <span class="php-quote">'form'</span>      =&gt; self::FORM,
+    <span class="php-quote">'plain'</span>     =&gt; self::PLAIN,
+    <span class="php-quote">'text'</span>      =&gt; self::PLAIN,
+    <span class="php-quote">'html'</span>      =&gt; self::HTML,
+    <span class="php-quote">'js'</span>        =&gt; self::JS,
+    <span class="php-quote">'javascript'</span>=&gt; self::JS,
+    <span class="php-quote">'yaml'</span>      =&gt; self::YAML,
+)</code></td>
+		<td class="description"><div>
+			<a href="#$mimes" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Map short name for a mime type to a full proper mime type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Map short name for a mime type to a full proper mime type</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.5.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
