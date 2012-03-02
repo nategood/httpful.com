@@ -266,13 +266,13 @@
                 <pre class="brush: php">
                     // Create the template
                     $template = Request::init()
-                        ->method(\Httpful\Http::POST)     // Alternative to Request::post
+                        ->method(Http::POST)     // Alternative to Request::post
                         ->withoutStrictSsl()              // Ease up on some of the SSL checks
                         ->expectsHtml()                   // Expect HTML responses
-                        ->sendsType(\Httpful\Mime::FORM); // Send application/x-www-form-urlencoded
+                        ->sendsType(Mime::FORM); // Send application/x-www-form-urlencoded
 
                     // Set it as a template
-                    \Httpful\Request::ini($template);
+                    Request::ini($template);
 
                     // This new request will have all the settings 
                     // of our template by default.  We can override
