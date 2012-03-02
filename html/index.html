@@ -1,4 +1,4 @@
-v<html>
+<html>
     <head>
         <title>Httpful</title>
         <meta name="google-site-verification" content="qmq90WgCDPhhYB55GjMVXJ2DYewLGVYLehTk5635nUM" />
@@ -25,9 +25,12 @@ v<html>
 
             <div class="menu" style="text-align:center">
                 <ul class="cloud">
+                    <li class="header">Menu</li>
                     <li class="sig"><a href="#h">Httpful</a></li>
                     <li class="sig"><a href="#install">Install</a></li>
-                    <!-- <li class="sig"><a href="https://github.com/nategood/httpful">GitHub</a></li> -->
+                    <li class="sig"><a href="https://github.com/nategood/httpful">GitHub</a></li>
+                    <li class="sig"><a href="/docs">Documentation</a></li>
+                    <li class="header">Examples</li>
                     <li><a href="#json">GET JSON</a></li>
                     <li><a href="#xml">GET XML</a></li>
                     <li><a href="#post-xml">POST XML</a></li>
@@ -40,19 +43,36 @@ v<html>
             </div>
 
             <p>
-                <a href="">Httpful</a> is a simple, chainable, readable PHP library intended to make speaking HTTP sane.  It let's the developer focus on interacting with APIs instead of sifting through cUrl set_opt pages.  
+                Httpful is a simple, chainable, readable PHP library intended to make speaking HTTP sane.  It let's the developer focus on interacting with APIs instead of sifting through curl set_opt pages.
             </p>
             <p>
-                Okay I'll shut up now and let the library do the talking.  Here's a quick snippet to whet your appetite.
-            </p>    
+                Features
+                <ul class="note">
+                    <li>Readable HTTP Method Support (GET, PUT, POST, DELETE, HEAD, and OPTIONS)</li>
+                    <li>Custom Headers</li>
+                    <li>Automatic "Smart" Parsing</li>
+                    <li>Automatic Payload Serialization</li>
+                    <li>Basic Auth</li>
+                    <li>Client Side Certificate Auth</li>
+                    <li>Request "Templates"</li>
+                </ul>
+            </p>
+            <p class="note">
+                Here's a quick snippet to whet your appetite.  Search the Twitter API.
+            </p>
             <pre class="brush:php">
                 $url = "http://search.twitter.com/search.json?q=" . urlencode('#PHP');
-                $response = \Httpful\Request::get($url)->send();
+                $response = Request::get($url)
+                    ->withXTrivialHeader('Just as a demo')
+                    ->send();
 
                 foreach ($response->body->results as $tweet) {
                     echo "@{$tweet->from_user} tweets \"{$tweet->text}\"\n";
                 }
             </pre>
+            <p class="note">
+                Here's a quick snippet to whet your appetite.  Note the chaining, the albeit trivial custom header (for the sake of demoing), and the automatic parsing based on Content-Type of response.
+            </p>
             
             <div class="example" id="install">
                 <h2>Install Option 1</h2>
