@@ -154,7 +154,7 @@
                     // Get GitHub Profile for nategood as XML
                     $uri = 'https://github.com/api/v2/xml/user/show/nategood';
                     
-                    $response = Request::get($uri)   // Will parse based on Content-Type
+                    $response = Request::get($uri)  // Will parse based on Content-Type
                         ->expectsXml()              // from the response, but can specify
                         ->send();                   // how to parse via expectsXml too.
 
@@ -189,7 +189,7 @@
                     The library automatically serializes our body (associative hash) into valid JSON (if we specified a specific JSON string, it would skip this serialization step).
                 </p>
                 <pre class="brush: php">
-                    $response = Request::put($uri)         // Build a PUT request...
+                    $response = Request::put($uri)                  // Build a PUT request...
                         ->sendsJson()                               // tell it we're sending (Content-Type) JSON...
                         ->authenticateWith('username', 'password')  // authenticate with basic auth...
                         ->body('{"json":"is awesome"}')             // attach a body/payload...
@@ -266,10 +266,10 @@
                 <pre class="brush: php">
                     // Create the template
                     $template = Request::init()
-                        ->method(Http::POST)     // Alternative to Request::post
-                        ->withoutStrictSsl()              // Ease up on some of the SSL checks
-                        ->expectsHtml()                   // Expect HTML responses
-                        ->sendsType(Mime::FORM); // Send application/x-www-form-urlencoded
+                        ->method(Http::POST)        // Alternative to Request::post
+                        ->withoutStrictSsl()        // Ease up on some of the SSL checks
+                        ->expectsHtml()             // Expect HTML responses
+                        ->sendsType(Mime::FORM);    // Send application/x-www-form-urlencoded
 
                     // Set it as a template
                     Request::ini($template);
