@@ -76,56 +76,42 @@
             </p>
             
             <div class="example" id="install">
-                <h2>Install Option 1</h2>
+                <h2>Install Option 1: Phar</h2>
                 <p>
                     IDEAL FOR: Quick hacking or small projects
                 </p>
                 <p class="note">
-                    Httpful provides a <a href="https://github.com/downloads/nategood/httpful/httpful.php">single file</a> that includes the entire library.  Simply <a href="https://github.com/downloads/nategood/httpful/httpful.php">download this file</a> and include it in your php file. 
-                </p>
-                <pre class="brush:shell">
-                    # Download and include the library as a single file 
-                    curl https://github.com/downloads/nategood/httpful/httpful.php > httpful.php
-                </pre>
-                <p class="note">
-                    Include the library to start hacking...
+                    Httpful provides a <a href="https://github.com/downloads/nategood/httpful/httpful.phar">PHP Archive file</a> that includes the entire library.  Simply <a href="https://github.com/downloads/nategood/httpful/httpful.phar">download this file</a> and <code>include</code> it in your code. 
                 </p>
                 <pre class="brush: php">
                     &lt;?php
-                    include('./httpful.php');
-                    use \Httpful\Request;
+                    // Point to where you downloaded the phar
+                    include('./httpful.phar');
                     
-                    $response = Request::get('http://example.com')->send();
+                    // And you're ready to go!
+                    $response = \Httpful\Request::get('http://example.com')->send();
                     ...
                 </pre>
             </div>
             
             <div class="example">
-                <h2>Install Option 2</h2>
+                <h2>Install Option 2: Composer</h2>
                 <p>
-                    IDEAL FOR: Everything else, especially projects that already include a PSR-0 autoloader
+                    IDEAL FOR: Projects that already support <a href="http://getcomposer.org">Composer</a>, the sane alternative to PEAR.
                 </p>
                 <p class="note">
-                Httpful supports the PSR-0 standard.  If your project already includes a PSR-0 compliant autoloader, just drop Httpful in your vendor library.  
+                    <a href="http://getcomposer.org">Composer</a> is starting to emerge as the true people's package manager for PHP.  If you aren't already using it, you should give it a shot.  Simply add <code>nategood/httpful</code> to <code>require</code> in your <code>composer.json</code> file like below.  After doing so, you're all set to start using Httpful!  The autoloader provided by composer takes care of the rest!
                 </p>
-                <pre class="brush:shell">
-                    # Clone the repo
-                    git clone https://github.com/nategood/httpful.git
-                    
-                    # If including in PSR-0 project, move to vendors dir
-                    mv httpful /path/to/vendors/dir
+                <pre class="brush: javascript">
+                    {
+                        "require": {
+                            "nategood/httpful": "*"
+                        }
+                    }
                 </pre>
                 <p class="note">
-                    If you don't have an autoloader, Httpful comes with a very simple one.  You can use this autoloader by simply including the "bootstrap.php" file (located in the base directory of Httpful).
+                    Lastly, Httpful supports the PSR-0 standard, therefore, if your project already includes a PSR-0 compliant autoloader, just drop Httpful in your vendor library.  If you don't have an autoloader, Httpful comes with a very simple one.  You can use this autoloader by simply including the "bootstrap.php" file (located in the base directory of Httpful).
                 </p>
-                <pre class="brush: php">
-                    &lt;?php
-                    // If your project doesn't have a PSR-0 complaint library
-                    // just use the included bootstrap file
-                    include('./path/to/httpful/bootstrap.php');
-                    $response = Request::get('http://example.com')->send();
-                    ...
-                </pre>
             </div>
             
             <div class="example" id="json">
