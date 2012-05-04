@@ -8,7 +8,7 @@
 	<title>File Httpful/Request.php</title>
 
 	<script type="text/javascript" src="resources/combined.js?2300626518"></script>
-	<script type="text/javascript" src="elementlist.js?1526275579"></script>
+	<script type="text/javascript" src="elementlist.js?1042924282"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1252480456" />
 
 </head>
@@ -22,7 +22,11 @@
 			<h3>Namespaces</h3>
 			<ul>
 				<li class="active"><a href="namespace-Httpful.html">Httpful</a>
+						<span></span>
+						<ul>
+				<li><a href="namespace-Httpful.Handlers.html">Handlers</a>
 						</li>
+							</ul></li>
 			</ul>
 		</div>
 
@@ -33,6 +37,7 @@
 			<ul>
 				<li><a href="class-Httpful.Bootstrap.html">Bootstrap</a></li>
 				<li><a href="class-Httpful.Http.html">Http</a></li>
+				<li><a href="class-Httpful.Httpful.html">Httpful</a></li>
 				<li><a href="class-Httpful.Mime.html">Mime</a></li>
 				<li class="active"><a href="class-Httpful.Request.html">Request</a></li>
 				<li><a href="class-Httpful.Response.html">Response</a></li>
@@ -184,7 +189,7 @@
 </span><a href="#104" id="104" class="l">104: </a><span class="php-comment">     * @param string|null $attr Name of attribute (e.g. mime, headers)
 </span><a href="#105" id="105" class="l">105: </a><span class="php-comment">     *    if null just return the whole template object;
 </span><a href="#106" id="106" class="l">106: </a><span class="php-comment">     */</span>
-<a href="#107" id="107" class="l">107: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> d(<span class="php-var">$attr</span>)
+<a href="#107" id="107" class="l">107: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> d(<span class="php-var">$attr</span>)
 <a href="#108" id="108" class="l">108: </a>    {
 <a href="#109" id="109" class="l">109: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">isset</span>(<span class="php-var">$attr</span>) ? self::<span class="php-var">$_template</span>-&gt;<span class="php-var">$attr</span> : self::<span class="php-var">$_template</span>;
 <a href="#110" id="110" class="l">110: </a>    }
@@ -215,7 +220,7 @@
 </span><a href="#135" id="135" class="l">135: </a><span class="php-comment">     */</span>
 <a href="#136" id="136" class="l">136: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> followRedirects(<span class="php-var">$follow</span> = <span class="php-keyword1">true</span>)
 <a href="#137" id="137" class="l">137: </a>    {
-<a href="#138" id="138" class="l">138: </a>        <span class="php-var">$this</span>-&gt;follow_redirects = <span class="php-keyword1">true</span>;
+<a href="#138" id="138" class="l">138: </a>        <span class="php-var">$this</span>-&gt;follow_redirects = <span class="php-var">$follow</span>;
 <a href="#139" id="139" class="l">139: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
 <a href="#140" id="140" class="l">140: </a>    }
 <a href="#141" id="141" class="l">141: </a>
@@ -247,7 +252,7 @@
 <a href="#167" id="167" class="l">167: </a>
 <a href="#168" id="168" class="l">168: </a>        <span class="php-var">$info</span> = <span class="php-keyword2">curl_getinfo</span>(<span class="php-var">$this</span>-&gt;_ch);
 <a href="#169" id="169" class="l">169: </a>        <span class="php-var">$response</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">&quot;\r\n\r\n&quot;</span>, <span class="php-var">$result</span>, <span class="php-num">2</span> + <span class="php-var">$info</span>[<span class="php-quote">'redirect_count'</span>]);
-<a href="#170" id="170" class="l">170: </a>        
+<a href="#170" id="170" class="l">170: </a>
 <a href="#171" id="171" class="l">171: </a>        <span class="php-var">$body</span> = <span class="php-keyword2">array_pop</span>(<span class="php-var">$response</span>);
 <a href="#172" id="172" class="l">172: </a>        <span class="php-var">$headers</span> = <span class="php-keyword2">array_pop</span>(<span class="php-var">$response</span>);
 <a href="#173" id="173" class="l">173: </a>
@@ -334,7 +339,7 @@
 <a href="#254" id="254" class="l">254: </a>    {
 <a href="#255" id="255" class="l">255: </a>        <span class="php-var">$this</span>-&gt;mime(<span class="php-var">$mimeType</span>);
 <a href="#256" id="256" class="l">256: </a>        <span class="php-var">$this</span>-&gt;payload = <span class="php-var">$payload</span>;
-<a href="#257" id="257" class="l">257: </a>        <span class="php-comment">// Intentially don't call _serializePayload yet.  Wait until</span>
+<a href="#257" id="257" class="l">257: </a>        <span class="php-comment">// Iserntentially don't call _serializePayload yet.  Wait until</span>
 <a href="#258" id="258" class="l">258: </a>        <span class="php-comment">// we actually send off the request to convert payload to string.</span>
 <a href="#259" id="259" class="l">259: </a>        <span class="php-comment">// At that time, the `serialized_payload` is set accordingly.</span>
 <a href="#260" id="260" class="l">260: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
@@ -522,7 +527,7 @@
 <a href="#442" id="442" class="l">442: </a>        <span class="php-var">$this</span>-&gt;auto_parse = <span class="php-var">$auto_parse</span>;
 <a href="#443" id="443" class="l">443: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
 <a href="#444" id="444" class="l">444: </a>    }
-<a href="#445" id="445" class="l">445: </a>    
+<a href="#445" id="445" class="l">445: </a>
 <a href="#446" id="446" class="l">446: </a>    <span class="php-comment">/**
 </span><a href="#447" id="447" class="l">447: </a><span class="php-comment">     * @see Request::autoParse()
 </span><a href="#448" id="448" class="l">448: </a><span class="php-comment">     * @return Request
@@ -531,7 +536,7 @@
 <a href="#451" id="451" class="l">451: </a>    {
 <a href="#452" id="452" class="l">452: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;autoParse(<span class="php-keyword1">false</span>);
 <a href="#453" id="453" class="l">453: </a>    }
-<a href="#454" id="454" class="l">454: </a>    
+<a href="#454" id="454" class="l">454: </a>
 <a href="#455" id="455" class="l">455: </a>    <span class="php-comment">/**
 </span><a href="#456" id="456" class="l">456: </a><span class="php-comment">     * @see Request::autoParse()
 </span><a href="#457" id="457" class="l">457: </a><span class="php-comment">     * @return Request
@@ -552,7 +557,7 @@
 <a href="#472" id="472" class="l">472: </a>        <span class="php-var">$this</span>-&gt;parse_callback = <span class="php-var">$callback</span>;
 <a href="#473" id="473" class="l">473: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
 <a href="#474" id="474" class="l">474: </a>    }
-<a href="#475" id="475" class="l">475: </a>    
+<a href="#475" id="475" class="l">475: </a>
 <a href="#476" id="476" class="l">476: </a>    <span class="php-comment">/**
 </span><a href="#477" id="477" class="l">477: </a><span class="php-comment">     * @see Request::parseResponsesWith()
 </span><a href="#478" id="478" class="l">478: </a><span class="php-comment">     * @return Request $this
@@ -645,7 +650,7 @@
 <a href="#565" id="565" class="l">565: </a>            <span class="php-var">$method</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$method</span>, <span class="php-num">4</span>);
 <a href="#566" id="566" class="l">566: </a>
 <a href="#567" id="567" class="l">567: </a>        <span class="php-comment">// Precede upper case letters with dashes, uppercase the first letter of method</span>
-<a href="#568" id="568" class="l">568: </a>        <span class="php-var">$header</span> = <span class="php-keyword2">ucwords</span>(<span class="php-keyword2">preg_replace</span>(<span class="php-quote">'/[A-Z]/'</span>, <span class="php-quote">'-$1'</span>, <span class="php-var">$method</span>));
+<a href="#568" id="568" class="l">568: </a>        <span class="php-var">$header</span> =  <span class="php-keyword2">substr</span>(<span class="php-keyword2">ucwords</span>(<span class="php-keyword2">preg_replace</span>(<span class="php-quote">'/([A-Z])/'</span>, <span class="php-quote">'-$1'</span>, <span class="php-var">$method</span>)), <span class="php-num">1</span>);
 <a href="#569" id="569" class="l">569: </a>        <span class="php-var">$this</span>-&gt;addHeader(<span class="php-var">$header</span>, <span class="php-var">$args</span>[<span class="php-num">0</span>]);
 <a href="#570" id="570" class="l">570: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
 <a href="#571" id="571" class="l">571: </a>    }
@@ -726,7 +731,7 @@
 </span><a href="#646" id="646" class="l">646: </a><span class="php-comment">     * Note: It does NOT actually send the request
 </span><a href="#647" id="647" class="l">647: </a><span class="php-comment">     * @return Request $this;
 </span><a href="#648" id="648" class="l">648: </a><span class="php-comment">     */</span>
-<a href="#649" id="649" class="l">649: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> _curlPrep()
+<a href="#649" id="649" class="l">649: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> _curlPrep()
 <a href="#650" id="650" class="l">650: </a>    {
 <a href="#651" id="651" class="l">651: </a>        <span class="php-comment">// Check for required stuff</span>
 <a href="#652" id="652" class="l">652: </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;uri))
@@ -755,7 +760,7 @@
 <a href="#675" id="675" class="l">675: </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$ch</span>, CURLOPT_SSLKEYPASSWD,  <span class="php-var">$this</span>-&gt;client_passphrase);
 <a href="#676" id="676" class="l">676: </a>            <span class="php-comment">// curl_setopt($ch, CURLOPT_SSLCERTPASSWD,  $this-&gt;client_cert_passphrase);</span>
 <a href="#677" id="677" class="l">677: </a>        }
-<a href="#678" id="678" class="l">678: </a>        
+<a href="#678" id="678" class="l">678: </a>
 <a href="#679" id="679" class="l">679: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;follow_redirects) {
 <a href="#680" id="680" class="l">680: </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$ch</span>, CURLOPT_FOLLOWLOCATION, <span class="php-keyword1">true</span>);
 <a href="#681" id="681" class="l">681: </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$ch</span>, CURLOPT_MAXREDIRS, <span class="php-num">25</span>);
@@ -812,7 +817,7 @@
 <a href="#732" id="732" class="l">732: </a>    }
 <a href="#733" id="733" class="l">733: </a>
 <a href="#734" id="734" class="l">734: </a>    <span class="php-comment">/**
-</span><a href="#735" id="735" class="l">735: </a><span class="php-comment">     * Turn payload from structure data into
+</span><a href="#735" id="735" class="l">735: </a><span class="php-comment">     * Turn payload from structured data into
 </span><a href="#736" id="736" class="l">736: </a><span class="php-comment">     * a string based on the current Mime type.
 </span><a href="#737" id="737" class="l">737: </a><span class="php-comment">     * This uses the auto_serialize option to determine
 </span><a href="#738" id="738" class="l">738: </a><span class="php-comment">     * it's course of action.  See serialize method for more.
@@ -835,159 +840,96 @@
 <a href="#755" id="755" class="l">755: </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;serialize_payload_method === self::SERIALIZE_PAYLOAD_SMART &amp;&amp; <span class="php-keyword2">is_scalar</span>(<span class="php-var">$payload</span>))
 <a href="#756" id="756" class="l">756: </a>            <span class="php-keyword1">return</span> <span class="php-var">$payload</span>;
 <a href="#757" id="757" class="l">757: </a>
-<a href="#758" id="758" class="l">758: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;payload_serializers[<span class="php-quote">'*'</span>]) || <span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;payload_serializers[<span class="php-var">$this</span>-&gt;content_type])) {
-<a href="#759" id="759" class="l">759: </a>            <span class="php-var">$key</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;payload_serializers[<span class="php-var">$this</span>-&gt;content_type]) ? <span class="php-var">$this</span>-&gt;content_type : <span class="php-quote">'*'</span>;
-<a href="#760" id="760" class="l">760: </a>            <span class="php-keyword1">return</span> <span class="php-keyword2">call_user_func</span>(<span class="php-var">$this</span>-&gt;payload_serializers[<span class="php-var">$key</span>], <span class="php-var">$payload</span>);
-<a href="#761" id="761" class="l">761: </a>        }
-<a href="#762" id="762" class="l">762: </a>
-<a href="#763" id="763" class="l">763: </a>        <span class="php-keyword1">switch</span>(<span class="php-var">$this</span>-&gt;content_type) {
-<a href="#764" id="764" class="l">764: </a>            <span class="php-keyword1">case</span> Mime::JSON:
-<a href="#765" id="765" class="l">765: </a>                <span class="php-keyword1">return</span> <span class="php-keyword2">json_encode</span>(<span class="php-var">$payload</span>);
-<a href="#766" id="766" class="l">766: </a>            <span class="php-keyword1">case</span> Mime::FORM:
-<a href="#767" id="767" class="l">767: </a>                <span class="php-keyword1">return</span> <span class="php-keyword2">http_build_query</span>(<span class="php-var">$payload</span>);
-<a href="#768" id="768" class="l">768: </a>            <span class="php-keyword1">case</span> Mime::XML:
-<a href="#769" id="769" class="l">769: </a>                <span class="php-keyword1">try</span> {
-<a href="#770" id="770" class="l">770: </a>                   <span class="php-keyword1">list</span>(<span class="php-var">$_</span>, <span class="php-var">$dom</span>) = <span class="php-var">$this</span>-&gt;_future_serializeAsXml(<span class="php-var">$payload</span>);
-<a href="#771" id="771" class="l">771: </a>                   <span class="php-keyword1">return</span> <span class="php-var">$dom</span>-&gt;saveXml();
-<a href="#772" id="772" class="l">772: </a>                } <span class="php-keyword1">catch</span> (Exception <span class="php-var">$e</span>) {}
-<a href="#773" id="773" class="l">773: </a>            <span class="php-keyword1">default</span>:
-<a href="#774" id="774" class="l">774: </a>                <span class="php-keyword1">return</span> (string) <span class="php-var">$payload</span>;
-<a href="#775" id="775" class="l">775: </a>        }
+<a href="#758" id="758" class="l">758: </a>        <span class="php-comment">// Use a custom serializer if one is registered for this mime type</span>
+<a href="#759" id="759" class="l">759: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;payload_serializers[<span class="php-quote">'*'</span>]) || <span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;payload_serializers[<span class="php-var">$this</span>-&gt;content_type])) {
+<a href="#760" id="760" class="l">760: </a>            <span class="php-var">$key</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;payload_serializers[<span class="php-var">$this</span>-&gt;content_type]) ? <span class="php-var">$this</span>-&gt;content_type : <span class="php-quote">'*'</span>;
+<a href="#761" id="761" class="l">761: </a>            <span class="php-keyword1">return</span> <span class="php-keyword2">call_user_func</span>(<span class="php-var">$this</span>-&gt;payload_serializers[<span class="php-var">$key</span>], <span class="php-var">$payload</span>);
+<a href="#762" id="762" class="l">762: </a>        }
+<a href="#763" id="763" class="l">763: </a>
+<a href="#764" id="764" class="l">764: </a>        <span class="php-keyword1">return</span> Httpful::get(<span class="php-var">$this</span>-&gt;content_type)-&gt;<span class="php-keyword2">serialize</span>(<span class="php-var">$payload</span>);
+<a href="#765" id="765" class="l">765: </a>    }
+<a href="#766" id="766" class="l">766: </a>
+<a href="#767" id="767" class="l">767: </a>    <span class="php-comment">/**
+</span><a href="#768" id="768" class="l">768: </a><span class="php-comment">     * HTTP Method Get
+</span><a href="#769" id="769" class="l">769: </a><span class="php-comment">     * @return Request
+</span><a href="#770" id="770" class="l">770: </a><span class="php-comment">     * @param string $uri optional uri to use
+</span><a href="#771" id="771" class="l">771: </a><span class="php-comment">     * @param string $mime expected
+</span><a href="#772" id="772" class="l">772: </a><span class="php-comment">     */</span>
+<a href="#773" id="773" class="l">773: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> get(<span class="php-var">$uri</span>, <span class="php-var">$mime</span> = <span class="php-keyword1">null</span>)
+<a href="#774" id="774" class="l">774: </a>    {
+<a href="#775" id="775" class="l">775: </a>        <span class="php-keyword1">return</span> self::init(Http::GET)-&gt;uri(<span class="php-var">$uri</span>)-&gt;mime(<span class="php-var">$mime</span>);
 <a href="#776" id="776" class="l">776: </a>    }
-<a href="#777" id="777" class="l">777: </a>
-<a href="#778" id="778" class="l">778: </a>    <span class="php-comment">/**
-</span><a href="#779" id="779" class="l">779: </a><span class="php-comment">     * @author Zack Douglas &lt;zack@zackerydouglas.info&gt;
-</span><a href="#780" id="780" class="l">780: </a><span class="php-comment">     */</span>
-<a href="#781" id="781" class="l">781: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> _future_serializeAsXml(<span class="php-var">$value</span>, <span class="php-var">$node</span> = <span class="php-keyword1">null</span>, <span class="php-var">$dom</span> = <span class="php-keyword1">null</span>)
-<a href="#782" id="782" class="l">782: </a>    {
-<a href="#783" id="783" class="l">783: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$dom</span>) {
-<a href="#784" id="784" class="l">784: </a>            <span class="php-var">$dom</span> = <span class="php-keyword1">new</span> \DOMDocument;
-<a href="#785" id="785" class="l">785: </a>        }
-<a href="#786" id="786" class="l">786: </a>        <span class="php-keyword1">if</span> (!<span class="php-var">$node</span>) {
-<a href="#787" id="787" class="l">787: </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_object</span>(<span class="php-var">$value</span>)) {
-<a href="#788" id="788" class="l">788: </a>                <span class="php-var">$node</span> = <span class="php-var">$dom</span>-&gt;createElement(<span class="php-quote">'response'</span>);
-<a href="#789" id="789" class="l">789: </a>                <span class="php-var">$dom</span>-&gt;appendChild(<span class="php-var">$node</span>);
-<a href="#790" id="790" class="l">790: </a>            } <span class="php-keyword1">else</span> {
-<a href="#791" id="791" class="l">791: </a>                <span class="php-var">$node</span> = <span class="php-var">$dom</span>;
-<a href="#792" id="792" class="l">792: </a>            }
-<a href="#793" id="793" class="l">793: </a>        }
-<a href="#794" id="794" class="l">794: </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_object</span>(<span class="php-var">$value</span>)) {
-<a href="#795" id="795" class="l">795: </a>            <span class="php-var">$objNode</span> = <span class="php-var">$dom</span>-&gt;createElement(<span class="php-keyword2">get_class</span>(<span class="php-var">$value</span>));
-<a href="#796" id="796" class="l">796: </a>            <span class="php-var">$node</span>-&gt;appendChild(<span class="php-var">$objNode</span>);
-<a href="#797" id="797" class="l">797: </a>            <span class="php-var">$this</span>-&gt;_future_serializeObjectAsXml(<span class="php-var">$value</span>, <span class="php-var">$objNode</span>, <span class="php-var">$dom</span>);
-<a href="#798" id="798" class="l">798: </a>        } <span class="php-keyword1">else</span> <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$value</span>)) {
-<a href="#799" id="799" class="l">799: </a>            <span class="php-var">$arrNode</span> = <span class="php-var">$dom</span>-&gt;createElement(<span class="php-quote">'array'</span>);
-<a href="#800" id="800" class="l">800: </a>            <span class="php-var">$node</span>-&gt;appendChild(<span class="php-var">$arrNode</span>);
-<a href="#801" id="801" class="l">801: </a>            <span class="php-var">$this</span>-&gt;_future_serializeArrayAsXml(<span class="php-var">$value</span>, <span class="php-var">$arrNode</span>, <span class="php-var">$dom</span>);
-<a href="#802" id="802" class="l">802: </a>        } <span class="php-keyword1">else</span> <span class="php-keyword1">if</span> (<span class="php-keyword2">is_bool</span>(<span class="php-var">$value</span>)) {
-<a href="#803" id="803" class="l">803: </a>            <span class="php-var">$node</span>-&gt;appendChild(<span class="php-var">$dom</span>-&gt;createTextNode(<span class="php-var">$value</span>?<span class="php-quote">'TRUE'</span>:<span class="php-quote">'FALSE'</span>));
-<a href="#804" id="804" class="l">804: </a>        } <span class="php-keyword1">else</span> {
-<a href="#805" id="805" class="l">805: </a>            <span class="php-var">$node</span>-&gt;appendChild(<span class="php-var">$dom</span>-&gt;createTextNode(<span class="php-var">$value</span>));
-<a href="#806" id="806" class="l">806: </a>        }
-<a href="#807" id="807" class="l">807: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(<span class="php-var">$node</span>, <span class="php-var">$dom</span>);
-<a href="#808" id="808" class="l">808: </a>    }
-<a href="#809" id="809" class="l">809: </a>    <span class="php-comment">/**
-</span><a href="#810" id="810" class="l">810: </a><span class="php-comment">     * @author Zack Douglas &lt;zack@zackerydouglas.info&gt;
-</span><a href="#811" id="811" class="l">811: </a><span class="php-comment">     */</span>
-<a href="#812" id="812" class="l">812: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> _future_serializeArrayAsXml(<span class="php-var">$value</span>, &amp;<span class="php-var">$parent</span>, &amp;<span class="php-var">$dom</span>)
-<a href="#813" id="813" class="l">813: </a>    {
-<a href="#814" id="814" class="l">814: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$value</span> <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; &amp;<span class="php-var">$v</span>) {
-<a href="#815" id="815" class="l">815: </a>            <span class="php-var">$n</span> = <span class="php-var">$k</span>;
-<a href="#816" id="816" class="l">816: </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">is_numeric</span>(<span class="php-var">$k</span>)) {
-<a href="#817" id="817" class="l">817: </a>                <span class="php-var">$n</span> = <span class="php-quote">&quot;child-</span><span class="php-var">{$n}</span><span class="php-quote">&quot;</span>;
-<a href="#818" id="818" class="l">818: </a>            }
-<a href="#819" id="819" class="l">819: </a>            <span class="php-var">$el</span> = <span class="php-var">$dom</span>-&gt;createElement(<span class="php-var">$n</span>);
-<a href="#820" id="820" class="l">820: </a>            <span class="php-var">$parent</span>-&gt;appendChild(<span class="php-var">$el</span>);
-<a href="#821" id="821" class="l">821: </a>            <span class="php-var">$this</span>-&gt;_future_serializeAsXml(<span class="php-var">$v</span>, <span class="php-var">$el</span>, <span class="php-var">$dom</span>);
-<a href="#822" id="822" class="l">822: </a>        }
-<a href="#823" id="823" class="l">823: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(<span class="php-var">$parent</span>, <span class="php-var">$dom</span>);
-<a href="#824" id="824" class="l">824: </a>    }
-<a href="#825" id="825" class="l">825: </a>    <span class="php-comment">/**
-</span><a href="#826" id="826" class="l">826: </a><span class="php-comment">     * @author Zack Douglas &lt;zack@zackerydouglas.info&gt;
-</span><a href="#827" id="827" class="l">827: </a><span class="php-comment">     */</span>
-<a href="#828" id="828" class="l">828: </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> _future_serializeObjectAsXml(<span class="php-var">$value</span>, &amp;<span class="php-var">$parent</span>, &amp;<span class="php-var">$dom</span>)
-<a href="#829" id="829" class="l">829: </a>    {
-<a href="#830" id="830" class="l">830: </a>        <span class="php-var">$refl</span> = <span class="php-keyword1">new</span> \ReflectionObject(<span class="php-var">$value</span>);
-<a href="#831" id="831" class="l">831: </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$refl</span>-&gt;getProperties() <span class="php-keyword1">as</span> <span class="php-var">$pr</span>) {
-<a href="#832" id="832" class="l">832: </a>            <span class="php-keyword1">if</span> (!<span class="php-var">$pr</span>-&gt;isPrivate()) {
-<a href="#833" id="833" class="l">833: </a>                <span class="php-var">$el</span> = <span class="php-var">$dom</span>-&gt;createElement(<span class="php-var">$pr</span>-&gt;getName());
-<a href="#834" id="834" class="l">834: </a>                <span class="php-var">$parent</span>-&gt;appendChild(<span class="php-var">$el</span>);
-<a href="#835" id="835" class="l">835: </a>                <span class="php-var">$this</span>-&gt;_future_serializeAsXml(<span class="php-var">$pr</span>-&gt;getValue(<span class="php-var">$value</span>), <span class="php-var">$el</span>, <span class="php-var">$dom</span>);
-<a href="#836" id="836" class="l">836: </a>            }
-<a href="#837" id="837" class="l">837: </a>        }
-<a href="#838" id="838" class="l">838: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(<span class="php-var">$parent</span>, <span class="php-var">$dom</span>);
-<a href="#839" id="839" class="l">839: </a>    }
-<a href="#840" id="840" class="l">840: </a>
-<a href="#841" id="841" class="l">841: </a>    <span class="php-comment">// Http Method Sugar</span>
-<a href="#842" id="842" class="l">842: </a>    <span class="php-comment">/**
-</span><a href="#843" id="843" class="l">843: </a><span class="php-comment">     * HTTP Method Get
-</span><a href="#844" id="844" class="l">844: </a><span class="php-comment">     * @return Request
-</span><a href="#845" id="845" class="l">845: </a><span class="php-comment">     * @param string $uri optional uri to use
-</span><a href="#846" id="846" class="l">846: </a><span class="php-comment">     * @param string $mime expected
-</span><a href="#847" id="847" class="l">847: </a><span class="php-comment">     */</span>
-<a href="#848" id="848" class="l">848: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> get(<span class="php-var">$uri</span>, <span class="php-var">$mime</span> = <span class="php-keyword1">null</span>)
-<a href="#849" id="849" class="l">849: </a>    {
-<a href="#850" id="850" class="l">850: </a>        <span class="php-keyword1">return</span> self::init(Http::GET)-&gt;uri(<span class="php-var">$uri</span>)-&gt;mime(<span class="php-var">$mime</span>);
-<a href="#851" id="851" class="l">851: </a>    }
-<a href="#852" id="852" class="l">852: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getQuick(<span class="php-var">$uri</span>, <span class="php-var">$mime</span> = <span class="php-keyword1">null</span>)
-<a href="#853" id="853" class="l">853: </a>    {
-<a href="#854" id="854" class="l">854: </a>        <span class="php-keyword1">return</span> self::get(<span class="php-var">$uri</span>, <span class="php-var">$mime</span>)-&gt;send();
-<a href="#855" id="855" class="l">855: </a>    }
-<a href="#856" id="856" class="l">856: </a>
-<a href="#857" id="857" class="l">857: </a>    <span class="php-comment">/**
-</span><a href="#858" id="858" class="l">858: </a><span class="php-comment">     * HTTP Method Post
-</span><a href="#859" id="859" class="l">859: </a><span class="php-comment">     * @return Request
-</span><a href="#860" id="860" class="l">860: </a><span class="php-comment">     * @param string $uri optional uri to use
-</span><a href="#861" id="861" class="l">861: </a><span class="php-comment">     * @param string $payload data to send in body of request
-</span><a href="#862" id="862" class="l">862: </a><span class="php-comment">     * @param string $mime MIME to use for Content-Type
-</span><a href="#863" id="863" class="l">863: </a><span class="php-comment">     */</span>
-<a href="#864" id="864" class="l">864: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> post(<span class="php-var">$uri</span>, <span class="php-var">$payload</span> = <span class="php-keyword1">null</span>, <span class="php-var">$mime</span> = <span class="php-keyword1">null</span>)
-<a href="#865" id="865" class="l">865: </a>    {
-<a href="#866" id="866" class="l">866: </a>        <span class="php-keyword1">return</span> self::init(Http::POST)-&gt;uri(<span class="php-var">$uri</span>)-&gt;body(<span class="php-var">$payload</span>, <span class="php-var">$mime</span>);
-<a href="#867" id="867" class="l">867: </a>    }
-<a href="#868" id="868" class="l">868: </a>
-<a href="#869" id="869" class="l">869: </a>    <span class="php-comment">/**
-</span><a href="#870" id="870" class="l">870: </a><span class="php-comment">     * HTTP Method Put
-</span><a href="#871" id="871" class="l">871: </a><span class="php-comment">     * @return Request
-</span><a href="#872" id="872" class="l">872: </a><span class="php-comment">     * @param string $uri optional uri to use
-</span><a href="#873" id="873" class="l">873: </a><span class="php-comment">     * @param string $payload data to send in body of request
-</span><a href="#874" id="874" class="l">874: </a><span class="php-comment">     * @param string $mime MIME to use for Content-Type
-</span><a href="#875" id="875" class="l">875: </a><span class="php-comment">     */</span>
-<a href="#876" id="876" class="l">876: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> put(<span class="php-var">$uri</span>, <span class="php-var">$payload</span> = <span class="php-keyword1">null</span>, <span class="php-var">$mime</span> = <span class="php-keyword1">null</span>)
-<a href="#877" id="877" class="l">877: </a>    {
-<a href="#878" id="878" class="l">878: </a>        <span class="php-keyword1">return</span> self::init(Http::PUT)-&gt;uri(<span class="php-var">$uri</span>)-&gt;body(<span class="php-var">$payload</span>, <span class="php-var">$mime</span>);
-<a href="#879" id="879" class="l">879: </a>    }
-<a href="#880" id="880" class="l">880: </a>
-<a href="#881" id="881" class="l">881: </a>    <span class="php-comment">/**
-</span><a href="#882" id="882" class="l">882: </a><span class="php-comment">     * HTTP Method Delete
-</span><a href="#883" id="883" class="l">883: </a><span class="php-comment">     * @return Request
-</span><a href="#884" id="884" class="l">884: </a><span class="php-comment">     * @param string $uri optional uri to use
-</span><a href="#885" id="885" class="l">885: </a><span class="php-comment">     */</span>
-<a href="#886" id="886" class="l">886: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <span class="php-keyword2">delete</span>(<span class="php-var">$uri</span>, <span class="php-var">$mime</span> = <span class="php-keyword1">null</span>)
-<a href="#887" id="887" class="l">887: </a>    {
-<a href="#888" id="888" class="l">888: </a>        <span class="php-keyword1">return</span> self::init(Http::<span class="php-keyword2">DELETE</span>)-&gt;uri(<span class="php-var">$uri</span>)-&gt;mime(<span class="php-var">$mime</span>);
-<a href="#889" id="889" class="l">889: </a>    }
-<a href="#890" id="890" class="l">890: </a>
-<a href="#891" id="891" class="l">891: </a>    <span class="php-comment">/**
-</span><a href="#892" id="892" class="l">892: </a><span class="php-comment">     * HTTP Method Head
-</span><a href="#893" id="893" class="l">893: </a><span class="php-comment">     * @return Request
-</span><a href="#894" id="894" class="l">894: </a><span class="php-comment">     * @param string $uri optional uri to use
-</span><a href="#895" id="895" class="l">895: </a><span class="php-comment">     */</span>
-<a href="#896" id="896" class="l">896: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> head(<span class="php-var">$uri</span>)
-<a href="#897" id="897" class="l">897: </a>    {
-<a href="#898" id="898" class="l">898: </a>        <span class="php-keyword1">return</span> self::init(Http::HEAD)-&gt;uri(<span class="php-var">$uri</span>);
-<a href="#899" id="899" class="l">899: </a>    }
-<a href="#900" id="900" class="l">900: </a>
-<a href="#901" id="901" class="l">901: </a>    <span class="php-comment">/**
-</span><a href="#902" id="902" class="l">902: </a><span class="php-comment">     * HTTP Method Options
-</span><a href="#903" id="903" class="l">903: </a><span class="php-comment">     * @return Request
-</span><a href="#904" id="904" class="l">904: </a><span class="php-comment">     * @param string $uri optional uri to use
-</span><a href="#905" id="905" class="l">905: </a><span class="php-comment">     */</span>
-<a href="#906" id="906" class="l">906: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> options(<span class="php-var">$uri</span>)
-<a href="#907" id="907" class="l">907: </a>    {
-<a href="#908" id="908" class="l">908: </a>        <span class="php-keyword1">return</span> self::init(Http::OPTIONS)-&gt;uri(<span class="php-var">$uri</span>);
-<a href="#909" id="909" class="l">909: </a>    }
-<a href="#910" id="910" class="l">910: </a>}</code></pre>
+<a href="#777" id="777" class="l">777: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getQuick(<span class="php-var">$uri</span>, <span class="php-var">$mime</span> = <span class="php-keyword1">null</span>)
+<a href="#778" id="778" class="l">778: </a>    {
+<a href="#779" id="779" class="l">779: </a>        <span class="php-keyword1">return</span> self::get(<span class="php-var">$uri</span>, <span class="php-var">$mime</span>)-&gt;send();
+<a href="#780" id="780" class="l">780: </a>    }
+<a href="#781" id="781" class="l">781: </a>
+<a href="#782" id="782" class="l">782: </a>    <span class="php-comment">/**
+</span><a href="#783" id="783" class="l">783: </a><span class="php-comment">     * HTTP Method Post
+</span><a href="#784" id="784" class="l">784: </a><span class="php-comment">     * @return Request
+</span><a href="#785" id="785" class="l">785: </a><span class="php-comment">     * @param string $uri optional uri to use
+</span><a href="#786" id="786" class="l">786: </a><span class="php-comment">     * @param string $payload data to send in body of request
+</span><a href="#787" id="787" class="l">787: </a><span class="php-comment">     * @param string $mime MIME to use for Content-Type
+</span><a href="#788" id="788" class="l">788: </a><span class="php-comment">     */</span>
+<a href="#789" id="789" class="l">789: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> post(<span class="php-var">$uri</span>, <span class="php-var">$payload</span> = <span class="php-keyword1">null</span>, <span class="php-var">$mime</span> = <span class="php-keyword1">null</span>)
+<a href="#790" id="790" class="l">790: </a>    {
+<a href="#791" id="791" class="l">791: </a>        <span class="php-keyword1">return</span> self::init(Http::POST)-&gt;uri(<span class="php-var">$uri</span>)-&gt;body(<span class="php-var">$payload</span>, <span class="php-var">$mime</span>);
+<a href="#792" id="792" class="l">792: </a>    }
+<a href="#793" id="793" class="l">793: </a>
+<a href="#794" id="794" class="l">794: </a>    <span class="php-comment">/**
+</span><a href="#795" id="795" class="l">795: </a><span class="php-comment">     * HTTP Method Put
+</span><a href="#796" id="796" class="l">796: </a><span class="php-comment">     * @return Request
+</span><a href="#797" id="797" class="l">797: </a><span class="php-comment">     * @param string $uri optional uri to use
+</span><a href="#798" id="798" class="l">798: </a><span class="php-comment">     * @param string $payload data to send in body of request
+</span><a href="#799" id="799" class="l">799: </a><span class="php-comment">     * @param string $mime MIME to use for Content-Type
+</span><a href="#800" id="800" class="l">800: </a><span class="php-comment">     */</span>
+<a href="#801" id="801" class="l">801: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> put(<span class="php-var">$uri</span>, <span class="php-var">$payload</span> = <span class="php-keyword1">null</span>, <span class="php-var">$mime</span> = <span class="php-keyword1">null</span>)
+<a href="#802" id="802" class="l">802: </a>    {
+<a href="#803" id="803" class="l">803: </a>        <span class="php-keyword1">return</span> self::init(Http::PUT)-&gt;uri(<span class="php-var">$uri</span>)-&gt;body(<span class="php-var">$payload</span>, <span class="php-var">$mime</span>);
+<a href="#804" id="804" class="l">804: </a>    }
+<a href="#805" id="805" class="l">805: </a>
+<a href="#806" id="806" class="l">806: </a>    <span class="php-comment">/**
+</span><a href="#807" id="807" class="l">807: </a><span class="php-comment">     * HTTP Method Patch
+</span><a href="#808" id="808" class="l">808: </a><span class="php-comment">     * @return Request
+</span><a href="#809" id="809" class="l">809: </a><span class="php-comment">     * @param string $uri optional uri to use
+</span><a href="#810" id="810" class="l">810: </a><span class="php-comment">     * @param string $payload data to send in body of request
+</span><a href="#811" id="811" class="l">811: </a><span class="php-comment">     * @param string $mime MIME to use for Content-Type
+</span><a href="#812" id="812" class="l">812: </a><span class="php-comment">     */</span>
+<a href="#813" id="813" class="l">813: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> patch(<span class="php-var">$uri</span>, <span class="php-var">$payload</span> = <span class="php-keyword1">null</span>, <span class="php-var">$mime</span> = <span class="php-keyword1">null</span>)
+<a href="#814" id="814" class="l">814: </a>    {
+<a href="#815" id="815" class="l">815: </a>        <span class="php-keyword1">return</span> self::init(Http::PATCH)-&gt;uri(<span class="php-var">$uri</span>)-&gt;body(<span class="php-var">$payload</span>, <span class="php-var">$mime</span>);
+<a href="#816" id="816" class="l">816: </a>    }
+<a href="#817" id="817" class="l">817: </a>
+<a href="#818" id="818" class="l">818: </a>    <span class="php-comment">/**
+</span><a href="#819" id="819" class="l">819: </a><span class="php-comment">     * HTTP Method Delete
+</span><a href="#820" id="820" class="l">820: </a><span class="php-comment">     * @return Request
+</span><a href="#821" id="821" class="l">821: </a><span class="php-comment">     * @param string $uri optional uri to use
+</span><a href="#822" id="822" class="l">822: </a><span class="php-comment">     */</span>
+<a href="#823" id="823" class="l">823: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> <span class="php-keyword2">delete</span>(<span class="php-var">$uri</span>, <span class="php-var">$mime</span> = <span class="php-keyword1">null</span>)
+<a href="#824" id="824" class="l">824: </a>    {
+<a href="#825" id="825" class="l">825: </a>        <span class="php-keyword1">return</span> self::init(Http::<span class="php-keyword2">DELETE</span>)-&gt;uri(<span class="php-var">$uri</span>)-&gt;mime(<span class="php-var">$mime</span>);
+<a href="#826" id="826" class="l">826: </a>    }
+<a href="#827" id="827" class="l">827: </a>
+<a href="#828" id="828" class="l">828: </a>    <span class="php-comment">/**
+</span><a href="#829" id="829" class="l">829: </a><span class="php-comment">     * HTTP Method Head
+</span><a href="#830" id="830" class="l">830: </a><span class="php-comment">     * @return Request
+</span><a href="#831" id="831" class="l">831: </a><span class="php-comment">     * @param string $uri optional uri to use
+</span><a href="#832" id="832" class="l">832: </a><span class="php-comment">     */</span>
+<a href="#833" id="833" class="l">833: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> head(<span class="php-var">$uri</span>)
+<a href="#834" id="834" class="l">834: </a>    {
+<a href="#835" id="835" class="l">835: </a>        <span class="php-keyword1">return</span> self::init(Http::HEAD)-&gt;uri(<span class="php-var">$uri</span>);
+<a href="#836" id="836" class="l">836: </a>    }
+<a href="#837" id="837" class="l">837: </a>
+<a href="#838" id="838" class="l">838: </a>    <span class="php-comment">/**
+</span><a href="#839" id="839" class="l">839: </a><span class="php-comment">     * HTTP Method Options
+</span><a href="#840" id="840" class="l">840: </a><span class="php-comment">     * @return Request
+</span><a href="#841" id="841" class="l">841: </a><span class="php-comment">     * @param string $uri optional uri to use
+</span><a href="#842" id="842" class="l">842: </a><span class="php-comment">     */</span>
+<a href="#843" id="843" class="l">843: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> options(<span class="php-var">$uri</span>)
+<a href="#844" id="844" class="l">844: </a>    {
+<a href="#845" id="845" class="l">845: </a>        <span class="php-keyword1">return</span> self::init(Http::OPTIONS)-&gt;uri(<span class="php-var">$uri</span>);
+<a href="#846" id="846" class="l">846: </a>    }
+<a href="#847" id="847" class="l">847: </a>}</code></pre>
 
 	<div id="footer">
 		 API documentation generated by <a href="http://apigen.org">ApiGen 2.5.0</a>

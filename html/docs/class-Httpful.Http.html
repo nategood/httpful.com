@@ -7,7 +7,7 @@
 	<title>Class Httpful\Http</title>
 
 	<script type="text/javascript" src="resources/combined.js?2300626518"></script>
-	<script type="text/javascript" src="elementlist.js?1526275579"></script>
+	<script type="text/javascript" src="elementlist.js?1042924282"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1252480456" />
 
 </head>
@@ -21,7 +21,11 @@
 			<h3>Namespaces</h3>
 			<ul>
 				<li class="active"><a href="namespace-Httpful.html">Httpful</a>
+						<span></span>
+						<ul>
+				<li><a href="namespace-Httpful.Handlers.html">Handlers</a>
 						</li>
+							</ul></li>
 			</ul>
 		</div>
 
@@ -32,6 +36,7 @@
 			<ul>
 				<li><a href="class-Httpful.Bootstrap.html">Bootstrap</a></li>
 				<li class="active"><a href="class-Httpful.Http.html">Http</a></li>
+				<li><a href="class-Httpful.Httpful.html">Httpful</a></li>
 				<li><a href="class-Httpful.Mime.html">Mime</a></li>
 				<li><a href="class-Httpful.Request.html">Request</a></li>
 				<li><a href="class-Httpful.Response.html">Response</a></li>
@@ -113,7 +118,7 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_safeMethods">#</a>
-		<code><a href="source-class-Httpful.Http.html#18" title="Go to source code">safeMethods</a>( )</code>
+		<code><a href="source-class-Httpful.Http.html#19" title="Go to source code">safeMethods</a>( )</code>
 
 		<div class="description short">
 			
@@ -146,7 +151,7 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isSafeMethod">#</a>
-		<code><a href="source-class-Httpful.Http.html#26" title="Go to source code">isSafeMethod</a>( <span>string <var>$method</var></span> )</code>
+		<code><a href="source-class-Httpful.Http.html#27" title="Go to source code">isSafeMethod</a>( <span>string <var>$method</var></span> )</code>
 
 		<div class="description short">
 			
@@ -184,7 +189,7 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isUnsafeMethod">#</a>
-		<code><a href="source-class-Httpful.Http.html#35" title="Go to source code">isUnsafeMethod</a>( <span>string <var>$method</var></span> )</code>
+		<code><a href="source-class-Httpful.Http.html#36" title="Go to source code">isUnsafeMethod</a>( <span>string <var>$method</var></span> )</code>
 
 		<div class="description short">
 			
@@ -222,7 +227,7 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_idempotentMethods">#</a>
-		<code><a href="source-class-Httpful.Http.html#44" title="Go to source code">idempotentMethods</a>( )</code>
+		<code><a href="source-class-Httpful.Http.html#45" title="Go to source code">idempotentMethods</a>( )</code>
 
 		<div class="description short">
 			
@@ -255,7 +260,7 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isIdempotent">#</a>
-		<code><a href="source-class-Httpful.Http.html#55" title="Go to source code">isIdempotent</a>( <span>string <var>$method</var></span> )</code>
+		<code><a href="source-class-Httpful.Http.html#56" title="Go to source code">isIdempotent</a>( <span>string <var>$method</var></span> )</code>
 
 		<div class="description short">
 			
@@ -293,7 +298,7 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isNotIdempotent">#</a>
-		<code><a href="source-class-Httpful.Http.html#64" title="Go to source code">isNotIdempotent</a>( <span>string <var>$method</var></span> )</code>
+		<code><a href="source-class-Httpful.Http.html#65" title="Go to source code">isNotIdempotent</a>( <span>string <var>$method</var></span> )</code>
 
 		<div class="description short">
 			
@@ -312,39 +317,6 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 				<h4>Returns</h4>
 				<div class="list">
 					<code>boolean</code><br />
-				</div>
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="canHaveBody" id="_canHaveBody">
-
-		<td class="attributes"><code>
-			
-			 public static
-			array
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_canHaveBody">#</a>
-		<code><a href="source-class-Httpful.Http.html#73" title="Go to source code">canHaveBody</a>( )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>array</code><br>of HTTP method strings<br />
 				</div>
 
 
@@ -474,6 +446,29 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 			</div>
 		</div></td>
 	</tr>
+	<tr data-order="PATCH" id="PATCH">
+
+		<td class="attributes"><code>
+			
+			string
+		</code></td>
+		<td class="name"><code>
+				<a href="source-class-Httpful.Http.html#15" title="Go to source code"><b>PATCH</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'PATCH'</span></code></td>
+		<td class="description"><div>
+			<a href="#PATCH" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
 	<tr data-order="OPTIONS" id="OPTIONS">
 
 		<td class="attributes"><code>
@@ -481,7 +476,7 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 			string
 		</code></td>
 		<td class="name"><code>
-				<a href="source-class-Httpful.Http.html#15" title="Go to source code"><b>OPTIONS</b></a>
+				<a href="source-class-Httpful.Http.html#16" title="Go to source code"><b>OPTIONS</b></a>
 		</code></td>
 		<td class="value"><code><span class="php-quote">'OPTIONS'</span></code></td>
 		<td class="description"><div>
@@ -504,7 +499,7 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 			string
 		</code></td>
 		<td class="name"><code>
-				<a href="source-class-Httpful.Http.html#16" title="Go to source code"><b>TRACE</b></a>
+				<a href="source-class-Httpful.Http.html#17" title="Go to source code"><b>TRACE</b></a>
 		</code></td>
 		<td class="value"><code><span class="php-quote">'TRACE'</span></code></td>
 		<td class="description"><div>

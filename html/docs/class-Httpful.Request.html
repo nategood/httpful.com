@@ -7,7 +7,7 @@
 	<title>Class Httpful\Request</title>
 
 	<script type="text/javascript" src="resources/combined.js?2300626518"></script>
-	<script type="text/javascript" src="elementlist.js?1526275579"></script>
+	<script type="text/javascript" src="elementlist.js?1042924282"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1252480456" />
 
 </head>
@@ -21,7 +21,11 @@
 			<h3>Namespaces</h3>
 			<ul>
 				<li class="active"><a href="namespace-Httpful.html">Httpful</a>
+						<span></span>
+						<ul>
+				<li><a href="namespace-Httpful.Handlers.html">Handlers</a>
 						</li>
+							</ul></li>
 			</ul>
 		</div>
 
@@ -32,6 +36,7 @@
 			<ul>
 				<li><a href="class-Httpful.Bootstrap.html">Bootstrap</a></li>
 				<li><a href="class-Httpful.Http.html">Http</a></li>
+				<li><a href="class-Httpful.Httpful.html">Httpful</a></li>
 				<li><a href="class-Httpful.Mime.html">Mime</a></li>
 				<li class="active"><a href="class-Httpful.Request.html">Request</a></li>
 				<li><a href="class-Httpful.Response.html">Response</a></li>
@@ -197,7 +202,7 @@ scheme of things as it typically only occurs once</p>
 
 		<td class="attributes"><code>
 			
-			 public 
+			 public static
 			mixed
 			
 			</code>
@@ -1801,6 +1806,45 @@ it is more readable.</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="_curlPrep" id="__curlPrep">
+
+		<td class="attributes"><code>
+			
+			 public 
+			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__curlPrep">#</a>
+		<code><a href="source-class-Httpful.Request.html#643" title="Go to source code">_curlPrep</a>( )</code>
+
+		<div class="description short">
+			
+<p>Does the heavy lifting. Uses de facto HTTP library cURL to set up the HTTP
+request. Note: It does NOT actually send the request</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Does the heavy lifting. Uses de facto HTTP library cURL to set up the HTTP
+request. Note: It does NOT actually send the request</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Httpful.Request.html">Httpful\Request</a></code></code><br>$this;<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="addOnCurlOption" id="_addOnCurlOption">
 
 		<td class="attributes"><code>
@@ -1859,7 +1903,7 @@ otherwise accessible from the rest of the API.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get">#</a>
-		<code><a href="source-class-Httpful.Request.html#842" title="Go to source code">get</a>( <span>string <var>$uri</var></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#767" title="Go to source code">get</a>( <span>string <var>$uri</var></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1903,7 +1947,7 @@ otherwise accessible from the rest of the API.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getQuick">#</a>
-		<code><a href="source-class-Httpful.Request.html#852" title="Go to source code">getQuick</a>( <span> <var>$uri</var></span>, <span> <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#777" title="Go to source code">getQuick</a>( <span> <var>$uri</var></span>, <span> <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1932,7 +1976,7 @@ otherwise accessible from the rest of the API.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_post">#</a>
-		<code><a href="source-class-Httpful.Request.html#857" title="Go to source code">post</a>( <span>string <var>$uri</var></span>, <span>string <var>$payload</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#782" title="Go to source code">post</a>( <span>string <var>$uri</var></span>, <span>string <var>$payload</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1978,7 +2022,7 @@ otherwise accessible from the rest of the API.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_put">#</a>
-		<code><a href="source-class-Httpful.Request.html#869" title="Go to source code">put</a>( <span>string <var>$uri</var></span>, <span>string <var>$payload</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#794" title="Go to source code">put</a>( <span>string <var>$uri</var></span>, <span>string <var>$payload</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1989,6 +2033,52 @@ otherwise accessible from the rest of the API.</p>
 		<div class="description detailed hidden">
 			
 <p>HTTP Method Put</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$uri</var></dt>
+					<dd><code>string</code><br> optional uri to use</dd>
+					<dt><var>$payload</var></dt>
+					<dd><code>string</code><br> data to send in body of request</dd>
+					<dt><var>$mime</var></dt>
+					<dd><code>string</code><br> MIME to use for Content-Type</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Httpful.Request.html">Httpful\Request</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="patch" id="_patch">
+
+		<td class="attributes"><code>
+			
+			 public static
+			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_patch">#</a>
+		<code><a href="source-class-Httpful.Request.html#806" title="Go to source code">patch</a>( <span>string <var>$uri</var></span>, <span>string <var>$payload</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>HTTP Method Patch</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>HTTP Method Patch</p>
 
 
 
@@ -2024,7 +2114,7 @@ otherwise accessible from the rest of the API.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_delete">#</a>
-		<code><a href="source-class-Httpful.Request.html#881" title="Go to source code">delete</a>( <span>string <var>$uri</var></span>, <span> <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#818" title="Go to source code">delete</a>( <span>string <var>$uri</var></span>, <span> <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -2068,7 +2158,7 @@ otherwise accessible from the rest of the API.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_head">#</a>
-		<code><a href="source-class-Httpful.Request.html#891" title="Go to source code">head</a>( <span>string <var>$uri</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#828" title="Go to source code">head</a>( <span>string <var>$uri</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2110,7 +2200,7 @@ otherwise accessible from the rest of the API.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_options">#</a>
-		<code><a href="source-class-Httpful.Request.html#901" title="Go to source code">options</a>( <span>string <var>$uri</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#838" title="Go to source code">options</a>( <span>string <var>$uri</var></span> )</code>
 
 		<div class="description short">
 			
