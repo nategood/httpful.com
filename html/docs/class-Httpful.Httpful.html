@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.5.0" />
+
+	<title>Class Httpful\Httpful</title>
+
+	<script type="text/javascript" src="resources/combined.js?2300626518"></script>
+	<script type="text/javascript" src="elementlist.js?1042924282"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1252480456" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-Httpful.html">Httpful</a>
+						<span></span>
+						<ul>
+				<li><a href="namespace-Httpful.Handlers.html">Handlers</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Httpful.Bootstrap.html">Bootstrap</a></li>
+				<li><a href="class-Httpful.Http.html">Http</a></li>
+				<li class="active"><a href="class-Httpful.Httpful.html">Httpful</a></li>
+				<li><a href="class-Httpful.Mime.html">Mime</a></li>
+				<li><a href="class-Httpful.Request.html">Request</a></li>
+				<li><a href="class-Httpful.Response.html">Response</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Httpful.html" title="Summary of Httpful"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Httpful</h1>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Httpful.html">Httpful</a><br />
+
+		<b>Located at</b> <a href="source-class-Httpful.Httpful.html#5" title="Go to source code">Httpful/Httpful.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="register" id="_register">
+
+		<td class="attributes"><code>
+			
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_register">#</a>
+		<code><a href="source-class-Httpful.Httpful.html#9" title="Go to source code">register</a>( <span>string <var>$mimeType</var></span>, <span><a href="class-Httpful.Handlers.MimeHandlerAdapter.html">Httpful\Handlers\MimeHandlerAdapter</a> <var>$handler</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mimeType</var></dt>
+					<dd><code>string</code><br>$mime_type</dd>
+					<dt><var>$handler</var></dt>
+					<dd><code>MimeHandlerAdapter</code></dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get" id="_get">
+
+		<td class="attributes"><code>
+			
+			 public static
+			MimeHandlerAdapter
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get">#</a>
+		<code><a href="source-class-Httpful.Httpful.html#18" title="Go to source code">get</a>( <span>string <var>$mimeType</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mimeType</var></dt>
+					<dd><code>string</code><br>$mime_type defaults to MimeHandlerAdapter</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MimeHandlerAdapter</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasParserRegistered" id="_hasParserRegistered">
+
+		<td class="attributes"><code>
+			
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasParserRegistered">#</a>
+		<code><a href="source-class-Httpful.Httpful.html#35" title="Go to source code">hasParserRegistered</a>( <span> <var>$mimeType</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Does this particular Mime Type have a parser registered for it?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Does this particular Mime Type have a parser registered for it?</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.5.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
