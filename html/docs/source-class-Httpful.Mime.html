@@ -125,7 +125,7 @@
 </span><a href="#40" id="40" class="l">40: </a><span class="php-comment">     * @return string full mime type (e.g. application/json)
 </span><a href="#41" id="41" class="l">41: </a><span class="php-comment">     * @param string common name for mime type (e.g. json)
 </span><a href="#42" id="42" class="l">42: </a><span class="php-comment">     */</span>
-<a href="#43" id="43" class="l">43: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getFullMime(<span class="php-var">$short_name</span>) 
+<a href="#43" id="43" class="l">43: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> getFullMime(<span class="php-var">$short_name</span>)
 <a href="#44" id="44" class="l">44: </a>    {
 <a href="#45" id="45" class="l">45: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">array_key_exists</span>(<span class="php-var">$short_name</span>, self::<span class="php-var">$mimes</span>) ? self::<span class="php-var">$mimes</span>[<span class="php-var">$short_name</span>] : <span class="php-var">$short_name</span>;
 <a href="#46" id="46" class="l">46: </a>    }
@@ -134,7 +134,7 @@
 </span><a href="#49" id="49" class="l">49: </a><span class="php-comment">     * @return bool
 </span><a href="#50" id="50" class="l">50: </a><span class="php-comment">     * @param string $short_name
 </span><a href="#51" id="51" class="l">51: </a><span class="php-comment">     */</span>
-<a href="#52" id="52" class="l">52: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> supportsMimeType(<span class="php-var">$short_name</span>) 
+<a href="#52" id="52" class="l">52: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> supportsMimeType(<span class="php-var">$short_name</span>)
 <a href="#53" id="53" class="l">53: </a>    {
 <a href="#54" id="54" class="l">54: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">array_key_exists</span>(<span class="php-var">$short_name</span>, self::<span class="php-var">$mimes</span>);
 <a href="#55" id="55" class="l">55: </a>    }
