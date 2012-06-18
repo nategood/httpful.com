@@ -3,20 +3,20 @@
     <head>
         <title>Httpful: The REST Friendly PHP HTTP Client Library</title>
         <meta name="google-site-verification" content="qmq90WgCDPhhYB55GjMVXJ2DYewLGVYLehTk5635nUM" />
-        
+
         <meta name="keywords" content="php, http, rest, http client, curl, curl alternative, restful, php http client, php rest client" />
         <meta name="description" content="Httpful is a simple, chainable PHP library intended to make speaking HTTP painless and interacting with REST APIs a breeze.  It includes built-in smart parsing, clean custom header support, basic and client side cert authentication, payload serialization and more." />
-        
+
         <link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
         <link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeMidnight.css" rel="stylesheet" type="text/css" />
-        
+
         <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
         <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPhp.js" type="text/javascript"></script>
         <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushBash.js" type="text/javascript"></script>
         <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js" type="text/javascript"></script>
 
         <!-- <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script> -->
-        
+
         <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     	<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
     	<style type="text/css">
@@ -24,7 +24,7 @@
     	</style>
     </head>
     <body>
-        <a href="https://github.com/nategood/httpful"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/abad93f42020b733148435e2cd92ce15c542d320/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub"></a>
+        <a href="https://github.com/nategood/httpful"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
         <div id="wrap">
             <h1 id="h">HTTPFUL</h1>
 
@@ -75,26 +75,26 @@
             <p class="note">
                 Note the chaining, the albeit trivial custom header (for the sake of demoing), and the automatic parsing based on Content-Type of response.
             </p>
-            
+
             <div class="example" id="install">
                 <h2>Install Option 1: Phar</h2>
                 <p>
                     IDEAL FOR: Quick hacking or small projects
                 </p>
                 <p class="note">
-                    Httpful provides a <a href="https://github.com/downloads/nategood/httpful/httpful.phar">PHP Archive file</a> that includes the entire library.  Simply <a href="https://github.com/downloads/nategood/httpful/httpful.phar">download this file</a> and <code>include</code> it in your code. 
+                    Httpful provides a <a href="https://github.com/downloads/nategood/httpful/httpful.phar">PHP Archive file</a> that includes the entire library.  Simply <a href="https://github.com/downloads/nategood/httpful/httpful.phar">download this file</a> and <code>include</code> it in your code.
                 </p>
                 <pre class="brush: php">
                     &lt;?php
                     // Point to where you downloaded the phar
                     include('./httpful.phar');
-                    
+
                     // And you're ready to go!
                     $response = \Httpful\Request::get('http://example.com')->send();
                     ...
                 </pre>
             </div>
-            
+
             <div class="example">
                 <h2>Install Option 2: Composer</h2>
                 <p>
@@ -114,7 +114,7 @@
                     Lastly, Httpful supports the PSR-0 standard, therefore, if your project already includes a PSR-0 compliant autoloader, just drop Httpful in your vendor library.  If you don't have an autoloader, Httpful comes with a very simple one.  You can use this autoloader by simply including the "bootstrap.php" file (located in the base directory of Httpful).
                 </p>
             </div>
-            
+
             <div class="example" id="json">
                 <h2>Get &amp; Parse JSON</h2>
                 <p>
@@ -130,7 +130,7 @@
                     echo 'The Dead Weather has ' . count($response->body->result->album) . " albums.\n";
                 </pre>
             </div>
-            
+
             <div class="example" id="xml">
                 <h2>Get &amp; Parse XML</h2>
                 <p>
@@ -139,20 +139,20 @@
                 <p class="note">
                     Although the library does "smart parsing" based off Content-Type, we can also explicitly state how to parse a response.  We've done so here with the `expectsXml` method.  Other common Mime types are supported this way as well (expectsJson, expectsHtml, etc.).
                 </p>
-                
+
                 <pre class="brush: php">
                     // Get GitHub Profile for nategood as XML
                     $uri = 'https://github.com/api/v2/xml/user/show/nategood';
-                    
+
                     $response = Request::get($uri)  // Will parse based on Content-Type
                         ->expectsXml()              // from the response, but can specify
                         ->send();                   // how to parse via expectsXml too.
 
-                    echo "{$request->body->name} joined GitHub on " . 
+                    echo "{$request->body->name} joined GitHub on " .
                         date('M jS', strtotime($request->body->{'created-at'})) ."\n";
                 </pre>
             </div>
-            
+
             <div class="example" id="post-xml">
                 <h2>Post XML</h2>
                 <p>
@@ -161,7 +161,7 @@
                 <p class="note">
                     We're using a string as the "body" so the library sends it as is.  If an associative array is provided, the library will serialize it to an XML string.
                 </p>
-                
+
                 <pre class="brush: php">
                     $response = Request::post($uri)
                         ->body('<xml><name>Value</name></xml>')
@@ -186,7 +186,7 @@
                         ->send();                                   // and finally, fire that thing off!
                 </pre>
             </div>
-            
+
             <div class="example" id="ssl-auth">
                 <h2>Delete w/ Client Side Cert Auth</h2>
                 <p>
@@ -202,7 +202,7 @@
                         ->send();
                 </pre>
             </div>
-            
+
             <div class="example" id="custom-headers">
                 <h2>Custom Headers</h2>
                 <p>
@@ -223,7 +223,7 @@
                         ->send();
                 </pre>
             </div>
-            
+
             <div class="example" id="custom-parsing">
                 <h2>Get CSV w/ custom response parser</h2>
                 <p>
@@ -233,7 +233,7 @@
                     While the library supports several built in parsing options, Httpful also allows for specifying custom headers via Closures.
                 </p>
                 <pre class="brush: php">
-                    // Attach our own handler that could naively parse comma 
+                    // Attach our own handler that could naively parse comma
                     // separated values into an array
                     $response = Request::get($uri)
                         ->parseWith(function($body) {
@@ -244,7 +244,7 @@
                     echo "This response had " . count($response) . " values separated via commas";
                 </pre>
             </div>
-            
+
             <div class="example" id="templates">
                 <h2>Templates</h2>
                 <p>
@@ -264,14 +264,14 @@
                     // Set it as a template
                     Request::ini($template);
 
-                    // This new request will have all the settings 
+                    // This new request will have all the settings
                     // of our template by default.  We can override
-                    // any of these settings by settings them on this 
+                    // any of these settings by settings them on this
                     // new instance as we've done with expected type.
                     $r = Request::get($uri)->expectsJson();
                 </pre>
             </div>
- 
+
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/jquery.lettering-0.6.1.min.js"></script>
@@ -291,7 +291,7 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-    
+
     </script>
     </body>
 </html>
