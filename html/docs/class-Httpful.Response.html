@@ -123,7 +123,7 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Httpful.Response.html#25" title="Go to source code">__construct</a>( <span>string <var>$body</var></span>, <span>string <var>$headers</var></span>, <span><a href="class-Httpful.Request.html">Httpful\Request</a> <var>$request</var></span> )</code>
+		<code><a href="source-class-Httpful.Response.html#26" title="Go to source code">__construct</a>( <span>string <var>$body</var></span>, <span>string <var>$headers</var></span>, <span><a href="class-Httpful.Request.html">Httpful\Request</a> <var>$request</var></span> )</code>
 
 		<div class="description short">
 			
@@ -161,20 +161,30 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasErrors">#</a>
-		<code><a href="source-class-Httpful.Response.html#44" title="Go to source code">hasErrors</a>( )</code>
+		<code><a href="source-class-Httpful.Response.html#45" title="Go to source code">hasErrors</a>( )</code>
 
 		<div class="description short">
 			
+<p>Status Code Definitions</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Status Code Definitions</p>
+
+<p>Informational 1xx Successful 2xx Redirection 3xx Client Error 4xx Server
+Error 5xx</p>
+
+<p><a
+href="http://pretty-rfc.herokuapp.com/RFC2616#status.codes">http://pretty-rfc.herokuapp.com/RFC2616#status.codes</a></p>
+
 
 
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>boolean</code><br>Did we receive a 400 or 500?<br />
+					<code>boolean</code><br>Did we receive a 4xx or 5xx?<br />
 				</div>
 
 
@@ -194,7 +204,7 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasBody">#</a>
-		<code><a href="source-class-Httpful.Response.html#52" title="Go to source code">hasBody</a>( )</code>
+		<code><a href="source-class-Httpful.Response.html#63" title="Go to source code">hasBody</a>( )</code>
 
 		<div class="description short">
 			
@@ -227,7 +237,7 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#__parse">#</a>
-		<code><a href="source-class-Httpful.Response.html#60" title="Go to source code">_parse</a>( <span>string <var>$body</var></span> )</code>
+		<code><a href="source-class-Httpful.Response.html#71" title="Go to source code">_parse</a>( <span>string <var>$body</var></span> )</code>
 
 		<div class="description short">
 			
@@ -271,7 +281,7 @@ array) based on the expected Mime type.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#__parseHeaders">#</a>
-		<code><a href="source-class-Httpful.Response.html#95" title="Go to source code">_parseHeaders</a>( <span>string <var>$headers</var></span> )</code>
+		<code><a href="source-class-Httpful.Response.html#106" title="Go to source code">_parseHeaders</a>( <span>string <var>$headers</var></span> )</code>
 
 		<div class="description short">
 			
@@ -313,7 +323,7 @@ array) based on the expected Mime type.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#__parseCode">#</a>
-		<code><a href="source-class-Httpful.Response.html#111" title="Go to source code">_parseCode</a>( <span> <var>$headers</var></span> )</code>
+		<code><a href="source-class-Httpful.Response.html#134" title="Go to source code">_parseCode</a>( <span> <var>$headers</var></span> )</code>
 
 		<div class="description short">
 			
@@ -342,7 +352,7 @@ array) based on the expected Mime type.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#__interpretHeaders">#</a>
-		<code><a href="source-class-Httpful.Response.html#120" title="Go to source code">_interpretHeaders</a>( )</code>
+		<code><a href="source-class-Httpful.Response.html#143" title="Go to source code">_interpretHeaders</a>( )</code>
 
 		<div class="description short">
 			
@@ -377,7 +387,7 @@ headers specially</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___toString">#</a>
-		<code><a href="source-class-Httpful.Response.html#159" title="Go to source code">__toString</a>( )</code>
+		<code><a href="source-class-Httpful.Response.html#182" title="Go to source code">__toString</a>( )</code>
 
 		<div class="description short">
 			
@@ -483,6 +493,31 @@ headers specially</p>
 			</div>
 		</div></td>
 	</tr>
+	<tr data-order="raw_headers" id="$raw_headers">
+
+		<td class="attributes"><code>
+			
+			public 
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Httpful.Response.html#16" title="Go to source code"><var>$raw_headers</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$raw_headers" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
 	<tr data-order="request" id="$request">
 
 		<td class="attributes"><code>
@@ -492,7 +527,7 @@ headers specially</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Response.html#16" title="Go to source code"><var>$request</var></a>
+				<a href="source-class-Httpful.Response.html#17" title="Go to source code"><var>$request</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -517,7 +552,7 @@ headers specially</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Response.html#17" title="Go to source code"><var>$code</var></a>
+				<a href="source-class-Httpful.Response.html#18" title="Go to source code"><var>$code</var></a>
 		</td>
 		<td class="value"><code><span class="php-num">0</span></code></td>
 		<td class="description"><div>
@@ -542,7 +577,7 @@ headers specially</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Response.html#18" title="Go to source code"><var>$content_type</var></a>
+				<a href="source-class-Httpful.Response.html#19" title="Go to source code"><var>$content_type</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -567,7 +602,7 @@ headers specially</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Response.html#19" title="Go to source code"><var>$parent_type</var></a>
+				<a href="source-class-Httpful.Response.html#20" title="Go to source code"><var>$parent_type</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -592,7 +627,7 @@ headers specially</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Response.html#20" title="Go to source code"><var>$charset</var></a>
+				<a href="source-class-Httpful.Response.html#21" title="Go to source code"><var>$charset</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -617,7 +652,7 @@ headers specially</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Response.html#21" title="Go to source code"><var>$is_mime_vendor_specific</var></a>
+				<a href="source-class-Httpful.Response.html#22" title="Go to source code"><var>$is_mime_vendor_specific</var></a>
 		</td>
 		<td class="value"><code><span class="php-keyword1">false</span></code></td>
 		<td class="description"><div>
@@ -642,7 +677,7 @@ headers specially</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Response.html#22" title="Go to source code"><var>$is_mime_personal</var></a>
+				<a href="source-class-Httpful.Response.html#23" title="Go to source code"><var>$is_mime_personal</var></a>
 		</td>
 		<td class="value"><code><span class="php-keyword1">false</span></code></td>
 		<td class="description"><div>

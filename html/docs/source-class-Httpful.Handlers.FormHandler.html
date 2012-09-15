@@ -110,7 +110,7 @@
 </span><a href="#25" id="25" class="l">25: </a><span class="php-comment">     */</span>
 <a href="#26" id="26" class="l">26: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <span class="php-keyword2">serialize</span>(<span class="php-var">$payload</span>)
 <a href="#27" id="27" class="l">27: </a>    {
-<a href="#28" id="28" class="l">28: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">http_build_query</span>(<span class="php-var">$payload</span>);
+<a href="#28" id="28" class="l">28: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">http_build_query</span>(<span class="php-var">$payload</span>, <span class="php-keyword1">null</span>, <span class="php-quote">'&amp;'</span>);
 <a href="#29" id="29" class="l">29: </a>    }
 <a href="#30" id="30" class="l">30: </a>}</code></pre>
 
