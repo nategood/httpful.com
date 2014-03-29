@@ -2,13 +2,13 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="ApiGen 2.5.0" />
+	<meta name="generator" content="ApiGen 2.6.1" />
 
 	<title>Class Httpful\Request</title>
 
-	<script type="text/javascript" src="resources/combined.js?2300626518"></script>
-	<script type="text/javascript" src="elementlist.js?3201848191"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1252480456" />
+	<script type="text/javascript" src="resources/combined.js?144019575"></script>
+	<script type="text/javascript" src="elementlist.js?848800875"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1532301413" />
 
 </head>
 
@@ -17,19 +17,24 @@
 	<div id="menu">
 		<a href="index.html" title="Overview"><span>Overview</span></a>
 
+
 		<div id="groups">
 			<h3>Namespaces</h3>
 			<ul>
-				<li class="active"><a href="namespace-Httpful.html">Httpful</a>
-						<span></span>
+				<li class="active"><a href="namespace-Httpful.html">Httpful<span></span></a>
 						<ul>
+				<li><a href="namespace-Httpful.Exception.html">Exception</a>
+						</li>
 				<li><a href="namespace-Httpful.Handlers.html">Handlers</a>
+						</li>
+				<li><a href="namespace-Httpful.Response.html">Response</a>
 						</li>
 							</ul></li>
 			</ul>
 		</div>
 
 		<hr />
+
 
 		<div id="elements">
 			<h3>Classes</h3>
@@ -84,6 +89,7 @@
 <div id="content" class="class">
 	<h1>Class Request</h1>
 
+
 	<div class="description">
 	
 <p>Clean, simple class for sending HTTP requests in PHP.</p>
@@ -103,15 +109,17 @@ This two adds to the readability and "chainabilty" of the library.</p>
 
 
 
+
 	<div class="info">
 		
 		
 		<b>Namespace:</b> <a href="namespace-Httpful.html">Httpful</a><br />
+		
 
 				<b>Author:</b>
 				Nate Good &lt;<a
 href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
-		<b>Located at</b> <a href="source-class-Httpful.Request.html#5" title="Go to source code">Httpful/Request.php</a><br />
+		<b>Located at</b> <a href="source-class-Httpful.Request.html#7" title="Go to source code">Httpful/Request.php</a><br />
 	</div>
 
 
@@ -120,7 +128,6 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 	<tr data-order="ini" id="_ini">
 
 		<td class="attributes"><code>
-			
 			 public static
 			
 			
@@ -129,7 +136,7 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_ini">#</a>
-		<code><a href="source-class-Httpful.Request.html#79" title="Go to source code">ini</a>( <span><a href="class-Httpful.Request.html">Httpful\Request</a> <var>$template</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#81" title="Go to source code">ini</a>( <span><code><a href="class-Httpful.Request.html">Httpful\Request</a></code> <var>$template</var></span> )</code>
 
 		<div class="description short">
 			
@@ -168,7 +175,6 @@ scheme of things as it typically only occurs once</p>
 	<tr data-order="resetIni" id="_resetIni">
 
 		<td class="attributes"><code>
-			
 			 public static
 			
 			
@@ -177,7 +183,7 @@ scheme of things as it typically only occurs once</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_resetIni">#</a>
-		<code><a href="source-class-Httpful.Request.html#96" title="Go to source code">resetIni</a>( )</code>
+		<code><a href="source-class-Httpful.Request.html#98" title="Go to source code">resetIni</a>( )</code>
 
 		<div class="description short">
 			
@@ -201,7 +207,6 @@ scheme of things as it typically only occurs once</p>
 	<tr data-order="d" id="_d">
 
 		<td class="attributes"><code>
-			
 			 public static
 			mixed
 			
@@ -210,7 +215,7 @@ scheme of things as it typically only occurs once</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_d">#</a>
-		<code><a href="source-class-Httpful.Request.html#105" title="Go to source code">d</a>( <span>string|null <var>$attr</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#107" title="Go to source code">d</a>( <span>string|null <var>$attr</var></span> )</code>
 
 		<div class="description short">
 			
@@ -241,10 +246,41 @@ object;</dd>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="hasTimeout" id="_hasTimeout">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasTimeout">#</a>
+		<code><a href="source-class-Httpful.Request.html#120" title="Go to source code">hasTimeout</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>does the request have a timeout?<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="hasBeenInitialized" id="_hasBeenInitialized">
 
 		<td class="attributes"><code>
-			
 			 public 
 			boolean
 			
@@ -253,7 +289,7 @@ object;</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasBeenInitialized">#</a>
-		<code><a href="source-class-Httpful.Request.html#118" title="Go to source code">hasBeenInitialized</a>( )</code>
+		<code><a href="source-class-Httpful.Request.html#128" title="Go to source code">hasBeenInitialized</a>( )</code>
 
 		<div class="description short">
 			
@@ -277,7 +313,6 @@ object;</dd>
 	<tr data-order="hasBasicAuth" id="_hasBasicAuth">
 
 		<td class="attributes"><code>
-			
 			 public 
 			boolean
 			
@@ -286,7 +321,7 @@ object;</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasBasicAuth">#</a>
-		<code><a href="source-class-Httpful.Request.html#126" title="Go to source code">hasBasicAuth</a>( )</code>
+		<code><a href="source-class-Httpful.Request.html#136" title="Go to source code">hasBasicAuth</a>( )</code>
 
 		<div class="description short">
 			
@@ -307,10 +342,110 @@ object;</dd>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="hasDigestAuth" id="_hasDigestAuth">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasDigestAuth">#</a>
+		<code><a href="source-class-Httpful.Request.html#144" title="Go to source code">hasDigestAuth</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>Is this request setup for digest auth?<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="timeout" id="_timeout">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_timeout">#</a>
+		<code><a href="source-class-Httpful.Request.html#152" title="Go to source code">timeout</a>( <span>|integer <var>$timeout</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Specify a HTTP timeout</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Specify a HTTP timeout</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$timeout</var></dt>
+					<dd><code>|integer</code><br> seconds to timeout the HTTP call</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Httpful.Request.html">Httpful\Request</a></code></code><br>$this<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="timeoutIn" id="_timeoutIn">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_timeoutIn">#</a>
+		<code><a href="source-class-Httpful.Request.html#164" title="Go to source code">timeoutIn</a>( <span> <var>$seconds</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="followRedirects" id="_followRedirects">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -319,7 +454,7 @@ object;</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_followRedirects">#</a>
-		<code><a href="source-class-Httpful.Request.html#134" title="Go to source code">followRedirects</a>( <span>boolean|integer <var>$follow</var> = <span class="php-keyword1">true</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#169" title="Go to source code">followRedirects</a>( <span>boolean|integer <var>$follow</var> = <span class="php-keyword1">true</span></span> )</code>
 
 		<div class="description short">
 			
@@ -354,7 +489,6 @@ request to that location</p>
 	<tr data-order="doNotFollowRedirects" id="_doNotFollowRedirects">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -363,7 +497,7 @@ request to that location</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_doNotFollowRedirects">#</a>
-		<code><a href="source-class-Httpful.Request.html#147" title="Go to source code">doNotFollowRedirects</a>( )</code>
+		<code><a href="source-class-Httpful.Request.html#182" title="Go to source code">doNotFollowRedirects</a>( )</code>
 
 		<div class="description short">
 			
@@ -391,7 +525,6 @@ request to that location</p>
 	<tr data-order="send" id="_send">
 
 		<td class="attributes"><code>
-			
 			 public 
 			string|associative
 			
@@ -400,7 +533,7 @@ request to that location</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_send">#</a>
-		<code><a href="source-class-Httpful.Request.html#156" title="Go to source code">send</a>( )</code>
+		<code><a href="source-class-Httpful.Request.html#191" title="Go to source code">send</a>( )</code>
 
 		<div class="description short">
 			
@@ -422,7 +555,7 @@ request to that location</p>
 
 				<h4>Throws</h4>
 				<div class="list">
-					<code>Exception</code><br>when unable to parse or communicate w server<br />
+					<code><code><a href="class-Httpful.Exception.ConnectionErrorException.html">Httpful\Exception\ConnectionErrorException</a></code></code><br>when unable to parse or communicate w server<br />
 				</div>
 
 
@@ -432,7 +565,6 @@ request to that location</p>
 	<tr data-order="sendIt" id="_sendIt">
 
 		<td class="attributes"><code>
-			
 			 public 
 			
 			
@@ -441,7 +573,7 @@ request to that location</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_sendIt">#</a>
-		<code><a href="source-class-Httpful.Request.html#181" title="Go to source code">sendIt</a>( )</code>
+		<code><a href="source-class-Httpful.Request.html#223" title="Go to source code">sendIt</a>( )</code>
 
 		<div class="description short">
 			
@@ -461,7 +593,6 @@ request to that location</p>
 	<tr data-order="uri" id="_uri">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -470,7 +601,7 @@ request to that location</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_uri">#</a>
-		<code><a href="source-class-Httpful.Request.html#188" title="Go to source code">uri</a>( <span>string <var>$uri</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#230" title="Go to source code">uri</a>( <span>string <var>$uri</var></span> )</code>
 
 		<div class="description short">
 			
@@ -499,7 +630,6 @@ request to that location</p>
 	<tr data-order="basicAuth" id="_basicAuth">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -508,7 +638,7 @@ request to that location</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_basicAuth">#</a>
-		<code><a href="source-class-Httpful.Request.html#198" title="Go to source code">basicAuth</a>( <span>string <var>$username</var></span>, <span>string <var>$password</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#240" title="Go to source code">basicAuth</a>( <span>string <var>$username</var></span>, <span>string <var>$password</var></span> )</code>
 
 		<div class="description short">
 			
@@ -543,7 +673,6 @@ request to that location</p>
 	<tr data-order="authenticateWith" id="_authenticateWith">
 
 		<td class="attributes"><code>
-			
 			 public 
 			
 			
@@ -552,7 +681,7 @@ request to that location</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_authenticateWith">#</a>
-		<code><a href="source-class-Httpful.Request.html#212" title="Go to source code">authenticateWith</a>( <span> <var>$username</var></span>, <span> <var>$password</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#254" title="Go to source code">authenticateWith</a>( <span> <var>$username</var></span>, <span> <var>$password</var></span> )</code>
 
 		<div class="description short">
 			
@@ -572,7 +701,6 @@ request to that location</p>
 	<tr data-order="authenticateWithBasic" id="_authenticateWithBasic">
 
 		<td class="attributes"><code>
-			
 			 public 
 			
 			
@@ -581,7 +709,78 @@ request to that location</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_authenticateWithBasic">#</a>
-		<code><a href="source-class-Httpful.Request.html#217" title="Go to source code">authenticateWithBasic</a>( <span> <var>$username</var></span>, <span> <var>$password</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#259" title="Go to source code">authenticateWithBasic</a>( <span> <var>$username</var></span>, <span> <var>$password</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="digestAuth" id="_digestAuth">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_digestAuth">#</a>
+		<code><a href="source-class-Httpful.Request.html#264" title="Go to source code">digestAuth</a>( <span>string <var>$username</var></span>, <span>string <var>$password</var></span> )</code>
+
+		<div class="description short">
+			
+<p>User Digest Auth.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>User Digest Auth.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$username</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$password</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Httpful.Request.html">Httpful\Request</a></code></code><br>this<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="authenticateWithDigest" id="_authenticateWithDigest">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_authenticateWithDigest">#</a>
+		<code><a href="source-class-Httpful.Request.html#277" title="Go to source code">authenticateWithDigest</a>( <span> <var>$username</var></span>, <span> <var>$password</var></span> )</code>
 
 		<div class="description short">
 			
@@ -601,7 +800,6 @@ request to that location</p>
 	<tr data-order="hasClientSideCert" id="_hasClientSideCert">
 
 		<td class="attributes"><code>
-			
 			 public 
 			is
 			
@@ -610,7 +808,7 @@ request to that location</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasClientSideCert">#</a>
-		<code><a href="source-class-Httpful.Request.html#222" title="Go to source code">hasClientSideCert</a>( )</code>
+		<code><a href="source-class-Httpful.Request.html#282" title="Go to source code">hasClientSideCert</a>( )</code>
 
 		<div class="description short">
 			
@@ -634,16 +832,15 @@ request to that location</p>
 	<tr data-order="clientSideCert" id="_clientSideCert">
 
 		<td class="attributes"><code>
-			
 			 public 
-			<code><a href="class-Httpful.Response.html">Httpful\Response</a></code>
+			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_clientSideCert">#</a>
-		<code><a href="source-class-Httpful.Request.html#229" title="Go to source code">clientSideCert</a>( <span>string <var>$cert</var></span>, <span>string <var>$key</var></span>, <span>string <var>$passphrase</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$encoding</var> = <span class="php-quote">'PEM'</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#289" title="Go to source code">clientSideCert</a>( <span>string <var>$cert</var></span>, <span>string <var>$key</var></span>, <span>string <var>$passphrase</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$encoding</var> = <span class="php-quote">'PEM'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -671,7 +868,7 @@ request to that location</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code><code><a href="class-Httpful.Response.html">Httpful\Response</a></code></code><br>$this<br />
+					<code><code><a href="class-Httpful.Request.html">Httpful\Request</a></code></code><br>$this<br />
 				</div>
 
 
@@ -682,7 +879,6 @@ request to that location</p>
 	<tr data-order="authenticateWithCert" id="_authenticateWithCert">
 
 		<td class="attributes"><code>
-			
 			 public 
 			
 			
@@ -691,7 +887,7 @@ request to that location</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_authenticateWithCert">#</a>
-		<code><a href="source-class-Httpful.Request.html#247" title="Go to source code">authenticateWithCert</a>( <span> <var>$cert</var></span>, <span> <var>$key</var></span>, <span> <var>$passphrase</var> = <span class="php-keyword1">null</span></span>, <span> <var>$encoding</var> = <span class="php-quote">'PEM'</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#307" title="Go to source code">authenticateWithCert</a>( <span> <var>$cert</var></span>, <span> <var>$key</var></span>, <span> <var>$passphrase</var> = <span class="php-keyword1">null</span></span>, <span> <var>$encoding</var> = <span class="php-quote">'PEM'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -711,7 +907,6 @@ request to that location</p>
 	<tr data-order="body" id="_body">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -720,7 +915,7 @@ request to that location</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_body">#</a>
-		<code><a href="source-class-Httpful.Request.html#252" title="Go to source code">body</a>( <span>mixed <var>$payload</var></span>, <span>string <var>$mimeType</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#312" title="Go to source code">body</a>( <span>mixed <var>$payload</var></span>, <span>string <var>$mimeType</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -755,7 +950,6 @@ request to that location</p>
 	<tr data-order="mime" id="_mime">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -764,7 +958,7 @@ request to that location</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_mime">#</a>
-		<code><a href="source-class-Httpful.Request.html#268" title="Go to source code">mime</a>( <span>string <var>$mime</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#328" title="Go to source code">mime</a>( <span>string <var>$mime</var></span> )</code>
 
 		<div class="description short">
 			
@@ -797,7 +991,6 @@ request to that location</p>
 	<tr data-order="sendsAndExpectsType" id="_sendsAndExpectsType">
 
 		<td class="attributes"><code>
-			
 			 public 
 			
 			
@@ -806,7 +999,7 @@ request to that location</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_sendsAndExpectsType">#</a>
-		<code><a href="source-class-Httpful.Request.html#281" title="Go to source code">sendsAndExpectsType</a>( <span> <var>$mime</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#344" title="Go to source code">sendsAndExpectsType</a>( <span> <var>$mime</var></span> )</code>
 
 		<div class="description short">
 			
@@ -826,7 +1019,6 @@ request to that location</p>
 	<tr data-order="sendsAndExpects" id="_sendsAndExpects">
 
 		<td class="attributes"><code>
-			
 			 public 
 			
 			
@@ -835,7 +1027,7 @@ request to that location</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_sendsAndExpects">#</a>
-		<code><a href="source-class-Httpful.Request.html#286" title="Go to source code">sendsAndExpects</a>( <span> <var>$mime</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#349" title="Go to source code">sendsAndExpects</a>( <span> <var>$mime</var></span> )</code>
 
 		<div class="description short">
 			
@@ -855,7 +1047,6 @@ request to that location</p>
 	<tr data-order="method" id="_method">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -864,7 +1055,7 @@ request to that location</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_method">#</a>
-		<code><a href="source-class-Httpful.Request.html#291" title="Go to source code">method</a>( <span>string <var>$method</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#354" title="Go to source code">method</a>( <span>string <var>$method</var></span> )</code>
 
 		<div class="description short">
 			
@@ -899,7 +1090,6 @@ instantiation is the method specific factory methods.</p>
 	<tr data-order="expects" id="_expects">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -908,7 +1098,7 @@ instantiation is the method specific factory methods.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_expects">#</a>
-		<code><a href="source-class-Httpful.Request.html#304" title="Go to source code">expects</a>( <span>string <var>$mime</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#367" title="Go to source code">expects</a>( <span>string <var>$mime</var></span> )</code>
 
 		<div class="description short">
 			
@@ -937,7 +1127,6 @@ instantiation is the method specific factory methods.</p>
 	<tr data-order="expectsType" id="_expectsType">
 
 		<td class="attributes"><code>
-			
 			 public 
 			
 			
@@ -946,7 +1135,35 @@ instantiation is the method specific factory methods.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_expectsType">#</a>
-		<code><a href="source-class-Httpful.Request.html#315" title="Go to source code">expectsType</a>( <span> <var>$mime</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#378" title="Go to source code">expectsType</a>( <span> <var>$mime</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="attach" id="_attach">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_attach">#</a>
+		<code><a href="source-class-Httpful.Request.html#383" title="Go to source code">attach</a>( <span> <var>$files</var></span> )</code>
 
 		<div class="description short">
 			
@@ -966,7 +1183,6 @@ instantiation is the method specific factory methods.</p>
 	<tr data-order="contentType" id="_contentType">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -975,7 +1191,7 @@ instantiation is the method specific factory methods.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_contentType">#</a>
-		<code><a href="source-class-Httpful.Request.html#320" title="Go to source code">contentType</a>( <span>string <var>$mime</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#395" title="Go to source code">contentType</a>( <span>string <var>$mime</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1004,7 +1220,6 @@ instantiation is the method specific factory methods.</p>
 	<tr data-order="sends" id="_sends">
 
 		<td class="attributes"><code>
-			
 			 public 
 			
 			
@@ -1013,7 +1228,7 @@ instantiation is the method specific factory methods.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_sends">#</a>
-		<code><a href="source-class-Httpful.Request.html#331" title="Go to source code">sends</a>( <span> <var>$mime</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#409" title="Go to source code">sends</a>( <span> <var>$mime</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1033,7 +1248,6 @@ instantiation is the method specific factory methods.</p>
 	<tr data-order="sendsType" id="_sendsType">
 
 		<td class="attributes"><code>
-			
 			 public 
 			
 			
@@ -1042,7 +1256,7 @@ instantiation is the method specific factory methods.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_sendsType">#</a>
-		<code><a href="source-class-Httpful.Request.html#336" title="Go to source code">sendsType</a>( <span> <var>$mime</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#414" title="Go to source code">sendsType</a>( <span> <var>$mime</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1062,7 +1276,6 @@ instantiation is the method specific factory methods.</p>
 	<tr data-order="strictSSL" id="_strictSSL">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1071,7 +1284,7 @@ instantiation is the method specific factory methods.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_strictSSL">#</a>
-		<code><a href="source-class-Httpful.Request.html#341" title="Go to source code">strictSSL</a>( <span>boolean <var>$strict</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#419" title="Go to source code">strictSSL</a>( <span>boolean <var>$strict</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1104,7 +1317,6 @@ instantiation is the method specific factory methods.</p>
 	<tr data-order="withoutStrictSSL" id="_withoutStrictSSL">
 
 		<td class="attributes"><code>
-			
 			 public 
 			
 			
@@ -1113,7 +1325,7 @@ instantiation is the method specific factory methods.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_withoutStrictSSL">#</a>
-		<code><a href="source-class-Httpful.Request.html#351" title="Go to source code">withoutStrictSSL</a>( )</code>
+		<code><a href="source-class-Httpful.Request.html#429" title="Go to source code">withoutStrictSSL</a>( )</code>
 
 		<div class="description short">
 			
@@ -1133,7 +1345,6 @@ instantiation is the method specific factory methods.</p>
 	<tr data-order="withStrictSSL" id="_withStrictSSL">
 
 		<td class="attributes"><code>
-			
 			 public 
 			
 			
@@ -1142,7 +1353,7 @@ instantiation is the method specific factory methods.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_withStrictSSL">#</a>
-		<code><a href="source-class-Httpful.Request.html#355" title="Go to source code">withStrictSSL</a>( )</code>
+		<code><a href="source-class-Httpful.Request.html#433" title="Go to source code">withStrictSSL</a>( )</code>
 
 		<div class="description short">
 			
@@ -1159,10 +1370,91 @@ instantiation is the method specific factory methods.</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="useProxy" id="_useProxy">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_useProxy">#</a>
+		<code><a href="source-class-Httpful.Request.html#438" title="Go to source code">useProxy</a>( <span>string <var>$proxy_host</var></span>, <span>number <var>$proxy_port</var> = <span class="php-num">80</span></span>, <span>string <var>$auth_type</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$auth_username</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$auth_password</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Use proxy configuration</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Use proxy configuration</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$proxy_host</var></dt>
+					<dd><code>string</code><br> Hostname or address of the proxy</dd>
+					<dt><var>$proxy_port</var></dt>
+					<dd><code>number</code><br> Port of the proxy. Default 80</dd>
+					<dt><var>$auth_type</var></dt>
+					<dd><code>string</code><br> Authentication type or null. Accepted values are CURLAUTH_BASIC, CURLAUTH_NTLM.
+Default null, no authentication</dd>
+					<dt><var>$auth_username</var></dt>
+					<dd><code>string</code><br> Authentication username. Default null</dd>
+					<dt><var>$auth_password</var></dt>
+					<dd><code>string</code><br> Authentication password. Default null</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Httpful.Request.html">Httpful\Request</a></code></code><br>this<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasProxy" id="_hasProxy">
+
+		<td class="attributes"><code>
+			 public 
+			is
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasProxy">#</a>
+		<code><a href="source-class-Httpful.Request.html#456" title="Go to source code">hasProxy</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>is</code><br>this request setup for using proxy?<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="serializePayload" id="_serializePayload">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1171,57 +1463,39 @@ instantiation is the method specific factory methods.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_serializePayload">#</a>
-		<code><a href="source-class-Httpful.Request.html#360" title="Go to source code">serializePayload</a>( <span>integer <var>$mode</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#463" title="Go to source code">serializePayload</a>( <span>integer <var>$mode</var></span> )</code>
 
 		<div class="description short">
 			
 <p>Determine how/if we use the built in serialization by setting the
-serialize_payload_method The default (SERIALIZE_PAYLOAD_SMART) is...</p>
-
-<ul>
-	<li>if payload is not a scalar (object/array)</li>
-</ul>
-
-<p>use the appropriate serialize method according to the Content-Type of this
-request.</p>
-
-<ul>
-	<li>if the payload IS a scalar (int, float, string, bool)</li>
-</ul>
-
-<p>than just return it as is. When this option is set SERIALIZE_PAYLOAD_ALWAYS,
-it will always use the appropriate serialize option regardless of whether
-payload is scalar or not When this option is set SERIALIZE_PAYLOAD_NEVER, it
-will never use any of the serialization methods. Really the only use for this is
-if you want the serialize methods to handle strings or not (e.g. Blah is not
-valid JSON, but "Blah" is). Forcing the serialization helps prevent that kind of
-error from happening.</p>
+serialize_payload_method The default (SERIALIZE_PAYLOAD_SMART) is...<br />
+- if payload is not a scalar (object/array)<br />
+use the appropriate serialize method according to<br />
+the Content-Type of this request.<br />
+- if the payload IS a scalar (int, float, string, bool)<br />
+than just return it as is. When this option is set SERIALIZE_PAYLOAD_ALWAYS, it
+will always use the appropriate serialize option regardless of whether payload
+is scalar or not When this option is set SERIALIZE_PAYLOAD_NEVER, it will never
+use any of the serialization methods. Really the only use for this is if you
+want the serialize methods to handle strings or not (e.g. Blah is not valid
+JSON, but "Blah" is). Forcing the serialization helps prevent that kind of error
+from happening.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
 <p>Determine how/if we use the built in serialization by setting the
-serialize_payload_method The default (SERIALIZE_PAYLOAD_SMART) is...</p>
-
-<ul>
-	<li>if payload is not a scalar (object/array)</li>
-</ul>
-
-<p>use the appropriate serialize method according to the Content-Type of this
-request.</p>
-
-<ul>
-	<li>if the payload IS a scalar (int, float, string, bool)</li>
-</ul>
-
-<p>than just return it as is. When this option is set SERIALIZE_PAYLOAD_ALWAYS,
-it will always use the appropriate serialize option regardless of whether
-payload is scalar or not When this option is set SERIALIZE_PAYLOAD_NEVER, it
-will never use any of the serialization methods. Really the only use for this is
-if you want the serialize methods to handle strings or not (e.g. Blah is not
-valid JSON, but "Blah" is). Forcing the serialization helps prevent that kind of
-error from happening.</p>
+serialize_payload_method The default (SERIALIZE_PAYLOAD_SMART) is... - if
+payload is not a scalar (object/array) use the appropriate serialize method
+according to the Content-Type of this request. - if the payload IS a scalar
+(int, float, string, bool) than just return it as is. When this option is set
+SERIALIZE_PAYLOAD_ALWAYS, it will always use the appropriate serialize option
+regardless of whether payload is scalar or not When this option is set
+SERIALIZE_PAYLOAD_NEVER, it will never use any of the serialization methods.
+Really the only use for this is if you want the serialize methods to handle
+strings or not (e.g. Blah is not valid JSON, but "Blah" is). Forcing the
+serialization helps prevent that kind of error from happening.</p>
 
 
 
@@ -1244,7 +1518,6 @@ error from happening.</p>
 	<tr data-order="neverSerializePayload" id="_neverSerializePayload">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1253,7 +1526,7 @@ error from happening.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_neverSerializePayload">#</a>
-		<code><a href="source-class-Httpful.Request.html#387" title="Go to source code">neverSerializePayload</a>( )</code>
+		<code><a href="source-class-Httpful.Request.html#490" title="Go to source code">neverSerializePayload</a>( )</code>
 
 		<div class="description short">
 			
@@ -1281,7 +1554,6 @@ error from happening.</p>
 	<tr data-order="smartSerializePayload" id="_smartSerializePayload">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1290,7 +1562,7 @@ error from happening.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_smartSerializePayload">#</a>
-		<code><a href="source-class-Httpful.Request.html#396" title="Go to source code">smartSerializePayload</a>( )</code>
+		<code><a href="source-class-Httpful.Request.html#499" title="Go to source code">smartSerializePayload</a>( )</code>
 
 		<div class="description short">
 			
@@ -1322,7 +1594,6 @@ error from happening.</p>
 	<tr data-order="alwaysSerializePayload" id="_alwaysSerializePayload">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1331,7 +1602,7 @@ error from happening.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_alwaysSerializePayload">#</a>
-		<code><a href="source-class-Httpful.Request.html#406" title="Go to source code">alwaysSerializePayload</a>( )</code>
+		<code><a href="source-class-Httpful.Request.html#509" title="Go to source code">alwaysSerializePayload</a>( )</code>
 
 		<div class="description short">
 			
@@ -1359,7 +1630,6 @@ error from happening.</p>
 	<tr data-order="addHeader" id="_addHeader">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1368,7 +1638,7 @@ error from happening.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addHeader">#</a>
-		<code><a href="source-class-Httpful.Request.html#415" title="Go to source code">addHeader</a>( <span>string <var>$header_name</var></span>, <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#518" title="Go to source code">addHeader</a>( <span>string <var>$header_name</var></span>, <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1409,7 +1679,6 @@ $Request-&gt;withMyHeaderName($my_value);</p>
 	<tr data-order="addHeaders" id="_addHeaders">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Response.html">Httpful\Response</a></code>
 			
@@ -1418,7 +1687,7 @@ $Request-&gt;withMyHeaderName($my_value);</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addHeaders">#</a>
-		<code><a href="source-class-Httpful.Request.html#431" title="Go to source code">addHeaders</a>( <span>array <var>$headers</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#534" title="Go to source code">addHeaders</a>( <span>array <var>$headers</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1455,7 +1724,6 @@ support for custom header methods.</p>
 	<tr data-order="autoParse" id="_autoParse">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1464,7 +1732,7 @@ support for custom header methods.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_autoParse">#</a>
-		<code><a href="source-class-Httpful.Request.html#447" title="Go to source code">autoParse</a>( <span>boolean <var>$auto_parse</var> = <span class="php-keyword1">true</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#550" title="Go to source code">autoParse</a>( <span>boolean <var>$auto_parse</var> = <span class="php-keyword1">true</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1494,7 +1762,6 @@ not auto parsing, Response-&gt;body returns the body as a string.</dd>
 	<tr data-order="withoutAutoParsing" id="_withoutAutoParsing">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1503,7 +1770,7 @@ not auto parsing, Response-&gt;body returns the body as a string.</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_withoutAutoParsing">#</a>
-		<code><a href="source-class-Httpful.Request.html#460" title="Go to source code">withoutAutoParsing</a>( )</code>
+		<code><a href="source-class-Httpful.Request.html#563" title="Go to source code">withoutAutoParsing</a>( )</code>
 
 		<div class="description short">
 			
@@ -1531,7 +1798,6 @@ not auto parsing, Response-&gt;body returns the body as a string.</dd>
 	<tr data-order="withAutoParsing" id="_withAutoParsing">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1540,7 +1806,7 @@ not auto parsing, Response-&gt;body returns the body as a string.</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_withAutoParsing">#</a>
-		<code><a href="source-class-Httpful.Request.html#469" title="Go to source code">withAutoParsing</a>( )</code>
+		<code><a href="source-class-Httpful.Request.html#572" title="Go to source code">withAutoParsing</a>( )</code>
 
 		<div class="description short">
 			
@@ -1568,7 +1834,6 @@ not auto parsing, Response-&gt;body returns the body as a string.</dd>
 	<tr data-order="parseWith" id="_parseWith">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1577,7 +1842,7 @@ not auto parsing, Response-&gt;body returns the body as a string.</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_parseWith">#</a>
-		<code><a href="source-class-Httpful.Request.html#478" title="Go to source code">parseWith</a>( <span>Closure <var>$callback</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#581" title="Go to source code">parseWith</a>( <span>Closure <var>$callback</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1610,7 +1875,6 @@ not auto parsing, Response-&gt;body returns the body as a string.</dd>
 	<tr data-order="parseResponsesWith" id="_parseResponsesWith">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1619,7 +1883,7 @@ not auto parsing, Response-&gt;body returns the body as a string.</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_parseResponsesWith">#</a>
-		<code><a href="source-class-Httpful.Request.html#490" title="Go to source code">parseResponsesWith</a>( <span>Closure <var>$callback</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#593" title="Go to source code">parseResponsesWith</a>( <span>Closure <var>$callback</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1652,7 +1916,6 @@ not auto parsing, Response-&gt;body returns the body as a string.</dd>
 	<tr data-order="registerPayloadSerializer" id="_registerPayloadSerializer">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1661,7 +1924,7 @@ not auto parsing, Response-&gt;body returns the body as a string.</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_registerPayloadSerializer">#</a>
-		<code><a href="source-class-Httpful.Request.html#500" title="Go to source code">registerPayloadSerializer</a>( <span>string <var>$mime</var></span>, <span>Closure <var>$callback</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#603" title="Go to source code">registerPayloadSerializer</a>( <span>string <var>$mime</var></span>, <span>Closure <var>$callback</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1704,7 +1967,6 @@ over the '*' callback.</p>
 	<tr data-order="serializePayloadWith" id="_serializePayloadWith">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1713,7 +1975,7 @@ over the '*' callback.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_serializePayloadWith">#</a>
-		<code><a href="source-class-Httpful.Request.html#518" title="Go to source code">serializePayloadWith</a>( <span>Closure <var>$callback</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#621" title="Go to source code">serializePayloadWith</a>( <span>Closure <var>$callback</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1746,7 +2008,6 @@ over the '*' callback.</p>
 	<tr data-order="__call" id="___call">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1755,7 +2016,7 @@ over the '*' callback.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___call">#</a>
-		<code><a href="source-class-Httpful.Request.html#528" title="Go to source code">__call</a>( <span>string <var>$method</var></span>, <span>array <var>$args</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#631" title="Go to source code">__call</a>( <span>string <var>$method</var></span>, <span>array <var>$args</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1798,7 +2059,6 @@ should be a string value of the header we're setting</dd>
 	<tr data-order="init" id="_init">
 
 		<td class="attributes"><code>
-			
 			 public static
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1807,7 +2067,7 @@ should be a string value of the header we're setting</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_init">#</a>
-		<code><a href="source-class-Httpful.Request.html#635" title="Go to source code">init</a>( <span>string <var>$method</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#739" title="Go to source code">init</a>( <span>string <var>$method</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1846,7 +2106,6 @@ it is more readable.</p>
 	<tr data-order="_curlPrep" id="__curlPrep">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1855,7 +2114,7 @@ it is more readable.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#__curlPrep">#</a>
-		<code><a href="source-class-Httpful.Request.html#660" title="Go to source code">_curlPrep</a>( )</code>
+		<code><a href="source-class-Httpful.Request.html#764" title="Go to source code">_curlPrep</a>( )</code>
 
 		<div class="description short">
 			
@@ -1882,10 +2141,110 @@ request. Note: It does NOT actually send the request</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="_determineLength" id="__determineLength">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__determineLength">#</a>
+		<code><a href="source-class-Httpful.Request.html#890" title="Go to source code">_determineLength</a>( <span>string <var>$str</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code><br> payload</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>length of payload in bytes<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isUpload" id="_isUpload">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isUpload">#</a>
+		<code><a href="source-class-Httpful.Request.html#903" title="Go to source code">isUpload</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="buildUserAgent" id="_buildUserAgent">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_buildUserAgent">#</a>
+		<code><a href="source-class-Httpful.Request.html#911" title="Go to source code">buildUserAgent</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="addOnCurlOption" id="_addOnCurlOption">
 
 		<td class="attributes"><code>
-			
 			 public 
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1894,7 +2253,7 @@ request. Note: It does NOT actually send the request</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addOnCurlOption">#</a>
-		<code><a href="source-class-Httpful.Request.html#786" title="Go to source code">addOnCurlOption</a>( <span>string <var>$curlopt</var></span>, <span>mixed <var>$curloptval</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#949" title="Go to source code">addOnCurlOption</a>( <span>string <var>$curlopt</var></span>, <span>mixed <var>$curloptval</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1931,7 +2290,6 @@ otherwise accessible from the rest of the API.</p>
 	<tr data-order="get" id="_get">
 
 		<td class="attributes"><code>
-			
 			 public static
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -1940,7 +2298,7 @@ otherwise accessible from the rest of the API.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get">#</a>
-		<code><a href="source-class-Httpful.Request.html#832" title="Go to source code">get</a>( <span>string <var>$uri</var></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#995" title="Go to source code">get</a>( <span>string <var>$uri</var></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1975,7 +2333,6 @@ otherwise accessible from the rest of the API.</p>
 	<tr data-order="getQuick" id="_getQuick">
 
 		<td class="attributes"><code>
-			
 			 public static
 			<code><a href="class-Httpful.Response.html">Httpful\Response</a></code>
 			
@@ -1984,7 +2341,7 @@ otherwise accessible from the rest of the API.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getQuick">#</a>
-		<code><a href="source-class-Httpful.Request.html#844" title="Go to source code">getQuick</a>( <span>string <var>$uri</var></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#1007" title="Go to source code">getQuick</a>( <span>string <var>$uri</var></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -2021,7 +2378,6 @@ response</p>
 	<tr data-order="post" id="_post">
 
 		<td class="attributes"><code>
-			
 			 public static
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -2030,7 +2386,7 @@ response</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_post">#</a>
-		<code><a href="source-class-Httpful.Request.html#856" title="Go to source code">post</a>( <span>string <var>$uri</var></span>, <span>string <var>$payload</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#1019" title="Go to source code">post</a>( <span>string <var>$uri</var></span>, <span>string <var>$payload</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -2067,7 +2423,6 @@ response</p>
 	<tr data-order="put" id="_put">
 
 		<td class="attributes"><code>
-			
 			 public static
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -2076,7 +2431,7 @@ response</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_put">#</a>
-		<code><a href="source-class-Httpful.Request.html#868" title="Go to source code">put</a>( <span>string <var>$uri</var></span>, <span>string <var>$payload</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#1031" title="Go to source code">put</a>( <span>string <var>$uri</var></span>, <span>string <var>$payload</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -2113,7 +2468,6 @@ response</p>
 	<tr data-order="patch" id="_patch">
 
 		<td class="attributes"><code>
-			
 			 public static
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -2122,7 +2476,7 @@ response</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_patch">#</a>
-		<code><a href="source-class-Httpful.Request.html#880" title="Go to source code">patch</a>( <span>string <var>$uri</var></span>, <span>string <var>$payload</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#1043" title="Go to source code">patch</a>( <span>string <var>$uri</var></span>, <span>string <var>$payload</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -2159,7 +2513,6 @@ response</p>
 	<tr data-order="delete" id="_delete">
 
 		<td class="attributes"><code>
-			
 			 public static
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -2168,7 +2521,7 @@ response</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_delete">#</a>
-		<code><a href="source-class-Httpful.Request.html#892" title="Go to source code">delete</a>( <span>string <var>$uri</var></span>, <span> <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#1055" title="Go to source code">delete</a>( <span>string <var>$uri</var></span>, <span> <var>$mime</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -2203,7 +2556,6 @@ response</p>
 	<tr data-order="head" id="_head">
 
 		<td class="attributes"><code>
-			
 			 public static
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -2212,7 +2564,7 @@ response</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_head">#</a>
-		<code><a href="source-class-Httpful.Request.html#902" title="Go to source code">head</a>( <span>string <var>$uri</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#1065" title="Go to source code">head</a>( <span>string <var>$uri</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2245,7 +2597,6 @@ response</p>
 	<tr data-order="options" id="_options">
 
 		<td class="attributes"><code>
-			
 			 public static
 			<code><a href="class-Httpful.Request.html">Httpful\Request</a></code>
 			
@@ -2254,7 +2605,7 @@ response</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_options">#</a>
-		<code><a href="source-class-Httpful.Request.html#912" title="Go to source code">options</a>( <span>string <var>$uri</var></span> )</code>
+		<code><a href="source-class-Httpful.Request.html#1075" title="Go to source code">options</a>( <span>string <var>$uri</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2294,11 +2645,10 @@ response</p>
 	<tr data-order="SERIALIZE_PAYLOAD_NEVER" id="SERIALIZE_PAYLOAD_NEVER">
 
 		<td class="attributes"><code>
-			
 			integer
 		</code></td>
 		<td class="name"><code>
-				<a href="source-class-Httpful.Request.html#23" title="Go to source code"><b>SERIALIZE_PAYLOAD_NEVER</b></a>
+				<a href="source-class-Httpful.Request.html#25" title="Go to source code"><b>SERIALIZE_PAYLOAD_NEVER</b></a>
 		</code></td>
 		<td class="value"><code><span class="php-num">0</span></code></td>
 		<td class="description"><div>
@@ -2317,11 +2667,10 @@ response</p>
 	<tr data-order="SERIALIZE_PAYLOAD_ALWAYS" id="SERIALIZE_PAYLOAD_ALWAYS">
 
 		<td class="attributes"><code>
-			
 			integer
 		</code></td>
 		<td class="name"><code>
-				<a href="source-class-Httpful.Request.html#24" title="Go to source code"><b>SERIALIZE_PAYLOAD_ALWAYS</b></a>
+				<a href="source-class-Httpful.Request.html#26" title="Go to source code"><b>SERIALIZE_PAYLOAD_ALWAYS</b></a>
 		</code></td>
 		<td class="value"><code><span class="php-num">1</span></code></td>
 		<td class="description"><div>
@@ -2340,11 +2689,10 @@ response</p>
 	<tr data-order="SERIALIZE_PAYLOAD_SMART" id="SERIALIZE_PAYLOAD_SMART">
 
 		<td class="attributes"><code>
-			
 			integer
 		</code></td>
 		<td class="name"><code>
-				<a href="source-class-Httpful.Request.html#25" title="Go to source code"><b>SERIALIZE_PAYLOAD_SMART</b></a>
+				<a href="source-class-Httpful.Request.html#27" title="Go to source code"><b>SERIALIZE_PAYLOAD_SMART</b></a>
 		</code></td>
 		<td class="value"><code><span class="php-num">2</span></code></td>
 		<td class="description"><div>
@@ -2363,11 +2711,10 @@ response</p>
 	<tr data-order="MAX_REDIRECTS_DEFAULT" id="MAX_REDIRECTS_DEFAULT">
 
 		<td class="attributes"><code>
-			
 			integer
 		</code></td>
 		<td class="name"><code>
-				<a href="source-class-Httpful.Request.html#27" title="Go to source code"><b>MAX_REDIRECTS_DEFAULT</b></a>
+				<a href="source-class-Httpful.Request.html#29" title="Go to source code"><b>MAX_REDIRECTS_DEFAULT</b></a>
 		</code></td>
 		<td class="value"><code><span class="php-num">25</span></code></td>
 		<td class="description"><div>
@@ -2392,13 +2739,12 @@ response</p>
 	<tr data-order="uri" id="$uri">
 
 		<td class="attributes"><code>
-			
 			public 
 			
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#29" title="Go to source code"><var>$uri</var></a>
+				<a href="source-class-Httpful.Request.html#31" title="Go to source code"><var>$uri</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -2417,13 +2763,12 @@ response</p>
 	<tr data-order="method" id="$method">
 
 		<td class="attributes"><code>
-			
 			public 
 			string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#30" title="Go to source code"><var>$method</var></a>
+				<a href="source-class-Httpful.Request.html#32" title="Go to source code"><var>$method</var></a>
 		</td>
 		<td class="value"><code><code><a href="class-Httpful.Http.html#GET">Httpful\Http::<b>GET</b></a></code></code></td>
 		<td class="description"><div>
@@ -2442,13 +2787,12 @@ response</p>
 	<tr data-order="headers" id="$headers">
 
 		<td class="attributes"><code>
-			
 			public 
 			array
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#31" title="Go to source code"><var>$headers</var></a>
+				<a href="source-class-Httpful.Request.html#33" title="Go to source code"><var>$headers</var></a>
 		</td>
 		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
 		<td class="description"><div>
@@ -2467,13 +2811,12 @@ response</p>
 	<tr data-order="raw_headers" id="$raw_headers">
 
 		<td class="attributes"><code>
-			
 			public 
 			string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#32" title="Go to source code"><var>$raw_headers</var></a>
+				<a href="source-class-Httpful.Request.html#34" title="Go to source code"><var>$raw_headers</var></a>
 		</td>
 		<td class="value"><code><span class="php-quote">''</span></code></td>
 		<td class="description"><div>
@@ -2492,13 +2835,12 @@ response</p>
 	<tr data-order="strict_ssl" id="$strict_ssl">
 
 		<td class="attributes"><code>
-			
 			public 
 			boolean
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#33" title="Go to source code"><var>$strict_ssl</var></a>
+				<a href="source-class-Httpful.Request.html#35" title="Go to source code"><var>$strict_ssl</var></a>
 		</td>
 		<td class="value"><code><span class="php-keyword1">false</span></code></td>
 		<td class="description"><div>
@@ -2517,13 +2859,12 @@ response</p>
 	<tr data-order="content_type" id="$content_type">
 
 		<td class="attributes"><code>
-			
 			public 
 			
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#34" title="Go to source code"><var>$content_type</var></a>
+				<a href="source-class-Httpful.Request.html#36" title="Go to source code"><var>$content_type</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -2542,13 +2883,12 @@ response</p>
 	<tr data-order="expected_type" id="$expected_type">
 
 		<td class="attributes"><code>
-			
 			public 
 			
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#35" title="Go to source code"><var>$expected_type</var></a>
+				<a href="source-class-Httpful.Request.html#37" title="Go to source code"><var>$expected_type</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -2567,13 +2907,12 @@ response</p>
 	<tr data-order="additional_curl_opts" id="$additional_curl_opts">
 
 		<td class="attributes"><code>
-			
 			public 
 			array
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#36" title="Go to source code"><var>$additional_curl_opts</var></a>
+				<a href="source-class-Httpful.Request.html#38" title="Go to source code"><var>$additional_curl_opts</var></a>
 		</td>
 		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
 		<td class="description"><div>
@@ -2592,13 +2931,12 @@ response</p>
 	<tr data-order="auto_parse" id="$auto_parse">
 
 		<td class="attributes"><code>
-			
 			public 
 			boolean
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#37" title="Go to source code"><var>$auto_parse</var></a>
+				<a href="source-class-Httpful.Request.html#39" title="Go to source code"><var>$auto_parse</var></a>
 		</td>
 		<td class="value"><code><span class="php-keyword1">true</span></code></td>
 		<td class="description"><div>
@@ -2617,13 +2955,12 @@ response</p>
 	<tr data-order="serialize_payload_method" id="$serialize_payload_method">
 
 		<td class="attributes"><code>
-			
 			public 
 			integer
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#38" title="Go to source code"><var>$serialize_payload_method</var></a>
+				<a href="source-class-Httpful.Request.html#40" title="Go to source code"><var>$serialize_payload_method</var></a>
 		</td>
 		<td class="value"><code><code><a href="class-Httpful.Request.html#SERIALIZE_PAYLOAD_SMART">Httpful\Request::<b>SERIALIZE_PAYLOAD_SMART</b></a></code></code></td>
 		<td class="description"><div>
@@ -2642,13 +2979,12 @@ response</p>
 	<tr data-order="username" id="$username">
 
 		<td class="attributes"><code>
-			
 			public 
 			
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#39" title="Go to source code"><var>$username</var></a>
+				<a href="source-class-Httpful.Request.html#41" title="Go to source code"><var>$username</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -2667,13 +3003,12 @@ response</p>
 	<tr data-order="password" id="$password">
 
 		<td class="attributes"><code>
-			
 			public 
 			
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#40" title="Go to source code"><var>$password</var></a>
+				<a href="source-class-Httpful.Request.html#42" title="Go to source code"><var>$password</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -2692,13 +3027,12 @@ response</p>
 	<tr data-order="serialized_payload" id="$serialized_payload">
 
 		<td class="attributes"><code>
-			
 			public 
 			
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#41" title="Go to source code"><var>$serialized_payload</var></a>
+				<a href="source-class-Httpful.Request.html#43" title="Go to source code"><var>$serialized_payload</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -2717,13 +3051,12 @@ response</p>
 	<tr data-order="payload" id="$payload">
 
 		<td class="attributes"><code>
-			
 			public 
 			
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#42" title="Go to source code"><var>$payload</var></a>
+				<a href="source-class-Httpful.Request.html#44" title="Go to source code"><var>$payload</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -2742,13 +3075,12 @@ response</p>
 	<tr data-order="parse_callback" id="$parse_callback">
 
 		<td class="attributes"><code>
-			
 			public 
 			
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#43" title="Go to source code"><var>$parse_callback</var></a>
+				<a href="source-class-Httpful.Request.html#45" title="Go to source code"><var>$parse_callback</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -2767,13 +3099,12 @@ response</p>
 	<tr data-order="error_callback" id="$error_callback">
 
 		<td class="attributes"><code>
-			
 			public 
 			
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#44" title="Go to source code"><var>$error_callback</var></a>
+				<a href="source-class-Httpful.Request.html#46" title="Go to source code"><var>$error_callback</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -2792,13 +3123,12 @@ response</p>
 	<tr data-order="follow_redirects" id="$follow_redirects">
 
 		<td class="attributes"><code>
-			
 			public 
 			boolean
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#45" title="Go to source code"><var>$follow_redirects</var></a>
+				<a href="source-class-Httpful.Request.html#47" title="Go to source code"><var>$follow_redirects</var></a>
 		</td>
 		<td class="value"><code><span class="php-keyword1">false</span></code></td>
 		<td class="description"><div>
@@ -2817,13 +3147,12 @@ response</p>
 	<tr data-order="max_redirects" id="$max_redirects">
 
 		<td class="attributes"><code>
-			
 			public 
 			integer
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#46" title="Go to source code"><var>$max_redirects</var></a>
+				<a href="source-class-Httpful.Request.html#48" title="Go to source code"><var>$max_redirects</var></a>
 		</td>
 		<td class="value"><code><code><a href="class-Httpful.Request.html#MAX_REDIRECTS_DEFAULT">Httpful\Request::<b>MAX_REDIRECTS_DEFAULT</b></a></code></code></td>
 		<td class="description"><div>
@@ -2842,13 +3171,12 @@ response</p>
 	<tr data-order="payload_serializers" id="$payload_serializers">
 
 		<td class="attributes"><code>
-			
 			public 
 			array
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#47" title="Go to source code"><var>$payload_serializers</var></a>
+				<a href="source-class-Httpful.Request.html#49" title="Go to source code"><var>$payload_serializers</var></a>
 		</td>
 		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
 		<td class="description"><div>
@@ -2867,13 +3195,12 @@ response</p>
 	<tr data-order="_ch" id="$_ch">
 
 		<td class="attributes"><code>
-			
 			public 
 			
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#56" title="Go to source code"><var>$_ch</var></a>
+				<a href="source-class-Httpful.Request.html#58" title="Go to source code"><var>$_ch</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -2892,13 +3219,12 @@ response</p>
 	<tr data-order="_debug" id="$_debug">
 
 		<td class="attributes"><code>
-			
 			public 
 			
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Request.html#57" title="Go to source code"><var>$_debug</var></a>
+				<a href="source-class-Httpful.Request.html#59" title="Go to source code"><var>$_debug</var></a>
 		</td>
 		<td class="value"><code></code></td>
 		<td class="description"><div>
@@ -2917,10 +3243,11 @@ response</p>
 	</table>
 
 
+
 </div>
 
 	<div id="footer">
-		 API documentation generated by <a href="http://apigen.org">ApiGen 2.5.0</a>
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.6.1</a>
 	</div>
 </div>
 </div>

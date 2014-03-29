@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="generator" content="ApiGen 2.6.1" />
 
-	<title>Class Httpful\Handlers\XHtmlHandler</title>
+	<title>Class Httpful\Exception\ConnectionErrorException</title>
 
 	<script type="text/javascript" src="resources/combined.js?144019575"></script>
 	<script type="text/javascript" src="elementlist.js?848800875"></script>
@@ -23,9 +23,9 @@
 			<ul>
 				<li class="active"><a href="namespace-Httpful.html">Httpful<span></span></a>
 						<ul>
-				<li><a href="namespace-Httpful.Exception.html">Exception</a>
+				<li class="active"><a href="namespace-Httpful.Exception.html">Exception</a>
 						</li>
-				<li class="active"><a href="namespace-Httpful.Handlers.html">Handlers</a>
+				<li><a href="namespace-Httpful.Handlers.html">Handlers</a>
 						</li>
 				<li><a href="namespace-Httpful.Response.html">Response</a>
 						</li>
@@ -37,18 +37,13 @@
 
 
 		<div id="elements">
-			<h3>Classes</h3>
+
+
+
+			<h3>Exceptions</h3>
 			<ul>
-				<li><a href="class-Httpful.Handlers.CsvHandler.html">CsvHandler</a></li>
-				<li><a href="class-Httpful.Handlers.FormHandler.html">FormHandler</a></li>
-				<li><a href="class-Httpful.Handlers.JsonHandler.html">JsonHandler</a></li>
-				<li><a href="class-Httpful.Handlers.MimeHandlerAdapter.html">MimeHandlerAdapter</a></li>
-				<li class="active"><a href="class-Httpful.Handlers.XHtmlHandler.html">XHtmlHandler</a></li>
-				<li><a href="class-Httpful.Handlers.XmlHandler.html">XmlHandler</a></li>
+				<li class="active"><a href="class-Httpful.Exception.ConnectionErrorException.html">ConnectionErrorException</a></li>
 			</ul>
-
-
-
 
 
 		</div>
@@ -72,7 +67,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="namespace-Httpful.Handlers.html" title="Summary of Httpful\Handlers"><span>Namespace</span></a>
+				<a href="namespace-Httpful.Exception.html" title="Summary of Httpful\Exception"><span>Namespace</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -87,20 +82,19 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class XHtmlHandler</h1>
+	<h1>Class ConnectionErrorException</h1>
 
 
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
-			<a href="class-Httpful.Handlers.MimeHandlerAdapter.html"><span>Httpful\Handlers\MimeHandlerAdapter</span></a>
-			
+Exception
 			
 			
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by" />
-<b><span>Httpful\Handlers\XHtmlHandler</span></b>			
+<b><span>Httpful\Exception\ConnectionErrorException</span></b>			
 			
 			
 		</dd>
@@ -116,23 +110,27 @@
 	<div class="info">
 		
 		
-		<b>Namespace:</b> <a href="namespace-Httpful.html">Httpful</a>\<a href="namespace-Httpful.Handlers.html">Handlers</a><br />
+		<b>Namespace:</b> <a href="namespace-Httpful.html">Httpful</a>\<a href="namespace-Httpful.Exception.html">Exception</a><br />
 		
 
-		<b>Located at</b> <a href="source-class-Httpful.Handlers.XHtmlHandler.html#11" title="Go to source code">Httpful/Handlers/XHtmlHandler.php</a><br />
+		<b>Located at</b> <a href="source-class-Httpful.Exception.ConnectionErrorException.html#5" title="Go to source code">Httpful/Exception/ConnectionErrorException.php</a><br />
 	</div>
 
 
 
 	<table class="summary inherited">
-	<caption>Methods inherited from <a href="class-Httpful.Handlers.MimeHandlerAdapter.html#methods">Httpful\Handlers\MimeHandlerAdapter</a></caption>
+	<caption>Methods inherited from Exception</caption>
 	<tr>
 		<td><code>
-			<a href="class-Httpful.Handlers.MimeHandlerAdapter.html#___construct">__construct()</a>, 
-			<a href="class-Httpful.Handlers.MimeHandlerAdapter.html#_init">init()</a>, 
-			<a href="class-Httpful.Handlers.MimeHandlerAdapter.html#_parse">parse()</a>, 
-			<a href="class-Httpful.Handlers.MimeHandlerAdapter.html#_serialize">serialize()</a>, 
-			<a href="class-Httpful.Handlers.MimeHandlerAdapter.html#_stripBom">stripBom()</a>
+__construct(), 
+__toString(), 
+getCode(), 
+getFile(), 
+getLine(), 
+getMessage(), 
+getPrevious(), 
+getTrace(), 
+getTraceAsString()
 		</code></td>
 	</tr>
 	</table>
@@ -143,6 +141,17 @@
 
 
 
+	<table class="summary inherited">
+	<caption>Properties inherited from Exception</caption>
+	<tr>
+		<td><code>
+<var>$code</var>, 
+<var>$file</var>, 
+<var>$line</var>, 
+<var>$message</var>
+		</code></td>
+	</tr>
+	</table>
 
 
 </div>
