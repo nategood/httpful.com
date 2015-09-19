@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="generator" content="ApiGen 2.6.1" />
+	<meta charset="utf-8">
 
 	<title>Class Httpful\Response</title>
 
-	<script type="text/javascript" src="resources/combined.js?144019575"></script>
-	<script type="text/javascript" src="elementlist.js?848800875"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1532301413" />
+	<link rel="stylesheet" href="resources/style.css?2174713577">
 
 </head>
 
@@ -19,21 +16,39 @@
 
 
 		<div id="groups">
-			<h3>Namespaces</h3>
+				<h3>Namespaces</h3>
 			<ul>
-				<li class="active"><a href="namespace-Httpful.html">Httpful<span></span></a>
+				<li class="active">
+					<a href="namespace-Httpful.html">
+						Httpful<span></span>
+					</a>
+
 						<ul>
-				<li><a href="namespace-Httpful.Exception.html">Exception</a>
+				<li>
+					<a href="namespace-Httpful.Exception.html">
+						Exception					</a>
+
 						</li>
-				<li><a href="namespace-Httpful.Handlers.html">Handlers</a>
+				<li>
+					<a href="namespace-Httpful.Handlers.html">
+						Handlers					</a>
+
 						</li>
-				<li><a href="namespace-Httpful.Response.html">Response</a>
+				<li>
+					<a href="namespace-Httpful.Response.html">
+						Response					</a>
+
 						</li>
 							</ul></li>
+				<li>
+					<a href="namespace-PHP.html">
+						PHP					</a>
+
+						</li>
 			</ul>
 		</div>
 
-		<hr />
+		<hr>
 
 
 		<div id="elements">
@@ -43,6 +58,7 @@
 				<li><a href="class-Httpful.Http.html">Http</a></li>
 				<li><a href="class-Httpful.Httpful.html">Httpful</a></li>
 				<li><a href="class-Httpful.Mime.html">Mime</a></li>
+				<li><a href="class-Httpful.Proxy.html">Proxy</a></li>
 				<li><a href="class-Httpful.Request.html">Request</a></li>
 				<li class="active"><a href="class-Httpful.Response.html">Response</a></li>
 			</ul>
@@ -60,10 +76,9 @@
 <div id="right">
 <div id="rightInner">
 	<form id="search">
-		<input type="hidden" name="cx" value="" />
-		<input type="hidden" name="ie" value="UTF-8" />
-		<input type="text" name="q" class="text" />
-		<input type="submit" value="Search" />
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
 	</form>
 
 	<div id="navigation">
@@ -78,9 +93,6 @@
 <span>Class</span>			</li>
 		</ul>
 		<ul>
-			<li>
-				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
-			</li>
 		</ul>
 		<ul>
 		</ul>
@@ -91,9 +103,7 @@
 
 
 	<div class="description">
-	
-<p>Models an HTTP response</p>
-
+	<p>Models an HTTP response</p>
 	</div>
 
 
@@ -107,22 +117,24 @@
 	<div class="info">
 		
 		
-		<b>Namespace:</b> <a href="namespace-Httpful.html">Httpful</a><br />
+		<b>Namespace:</b> Httpful<br>
 		
 
 				<b>Author:</b>
-				Nate Good &lt;<a
-href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
-		<b>Located at</b> <a href="source-class-Httpful.Response.html#5" title="Go to source code">Httpful/Response.php</a><br />
+				Nate Good <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x6d;&#101;&#x40;&#110;&#x61;&#116;&#x65;&#103;&#x6f;&#111;&#x64;&#46;&#x63;o&#x6d;">&#x6d;&#101;&#x40;&#110;&#x61;&#116;&#x65;&#103;&#x6f;&#111;&#x64;&#46;&#x63;o&#x6d;</a><br>
+			<b>Located at</b> <a href="source-class-Httpful.Response.html#5-195" title="Go to source code">Httpful/Response.php</a>
+		<br>
 	</div>
 
 
-	<table class="summary" id="methods">
+
+	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
 	<tr data-order="__construct" id="___construct">
 
 		<td class="attributes"><code>
 			 public 
+
 			
 			
 			</code>
@@ -130,7 +142,7 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Httpful.Response.html#26" title="Go to source code">__construct</a>( <span>string <var>$body</var></span>, <span>string <var>$headers</var></span>, <span><code><a href="class-Httpful.Request.html">Httpful\Request</a></code> <var>$request</var></span> )</code>
+		<code><a href="source-class-Httpful.Response.html#28-47" title="Go to source code">__construct</a>( <span>string <var>$body</var></span>, <span>string <var>$headers</var></span>, <span><code><a href="class-Httpful.Request.html">Httpful\Request</a></code> <var>$request</var></span>, <span>array <var>$meta_data</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 		<div class="description short">
 			
@@ -143,12 +155,15 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$body</var></dt>
-					<dd><code>string</code></dd>
+					<dd></dd>
 					<dt><var>$headers</var></dt>
-					<dd><code>string</code></dd>
+					<dd></dd>
 					<dt><var>$request</var></dt>
-					<dd><code><code><a href="class-Httpful.Request.html">Httpful\Request</a></code></code></dd>
+					<dd></dd>
+					<dt><var>$meta_data</var></dt>
+					<dd></dd>
 				</dl></div>
+
 
 
 
@@ -160,6 +175,7 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 
 		<td class="attributes"><code>
 			 public 
+
 			boolean
 			
 			</code>
@@ -167,31 +183,30 @@ href="mailto:me&#64;nategood.com">me&#64;<!---->nategood.com</a>&gt;<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasErrors">#</a>
-		<code><a href="source-class-Httpful.Response.html#45" title="Go to source code">hasErrors</a>( )</code>
+		<code><a href="source-class-Httpful.Response.html#49-65" title="Go to source code">hasErrors</a>( )</code>
 
 		<div class="description short">
-			
-<p>Status Code Definitions</p>
-
+			<p>Status Code Definitions</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
-<p>Status Code Definitions</p>
+			<p>Status Code Definitions</p>
 
-<p>Informational 1xx Successful 2xx Redirection 3xx Client Error 4xx Server
-Error 5xx</p>
+<p>Informational 1xx
+Successful    2xx
+Redirection   3xx
+Client Error  4xx
+Server Error  5xx</p>
 
-<p><a
-href="http://pretty-rfc.herokuapp.com/RFC2616#status.codes">http://pretty-rfc.herokuapp.com/RFC2616#status.codes</a></p>
-
+<p>http://pretty-rfc.herokuapp.com/RFC2616#status.codes</p>
 
 
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>boolean</code><br>Did we receive a 4xx or 5xx?<br />
+					<code>boolean</code><br>Did we receive a 4xx or 5xx?
 				</div>
+
 
 
 
@@ -202,14 +217,15 @@ href="http://pretty-rfc.herokuapp.com/RFC2616#status.codes">http://pretty-rfc.he
 
 		<td class="attributes"><code>
 			 public 
-			return
+
+			boolean
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasBody">#</a>
-		<code><a href="source-class-Httpful.Response.html#63" title="Go to source code">hasBody</a>( )</code>
+		<code><a href="source-class-Httpful.Response.html#67-73" title="Go to source code">hasBody</a>( )</code>
 
 		<div class="description short">
 			
@@ -222,8 +238,9 @@ href="http://pretty-rfc.herokuapp.com/RFC2616#status.codes">http://pretty-rfc.he
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>return</code><br>bool<br />
+					<code>boolean</code>
 				</div>
+
 
 
 
@@ -234,6 +251,7 @@ href="http://pretty-rfc.herokuapp.com/RFC2616#status.codes">http://pretty-rfc.he
 
 		<td class="attributes"><code>
 			 public 
+
 			array|string|object
 			
 			</code>
@@ -241,32 +259,31 @@ href="http://pretty-rfc.herokuapp.com/RFC2616#status.codes">http://pretty-rfc.he
 
 		<td class="name"><div>
 		<a class="anchor" href="#__parse">#</a>
-		<code><a href="source-class-Httpful.Response.html#71" title="Go to source code">_parse</a>( <span>string <var>$body</var></span> )</code>
+		<code><a href="source-class-Httpful.Response.html#75-108" title="Go to source code">_parse</a>( <span>string <var>$body</var></span> )</code>
 
 		<div class="description short">
-			
-<p>Parse the response into a clean data structure (most often an associative
-array) based on the expected Mime type.</p>
-
+			<p>Parse the response into a clean data structure
+(most often an associative array) based on the expected
+Mime type.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
-<p>Parse the response into a clean data structure (most often an associative
-array) based on the expected Mime type.</p>
-
+			<p>Parse the response into a clean data structure
+(most often an associative array) based on the expected
+Mime type.</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$body</var></dt>
-					<dd><code>string</code><br>Http response body</dd>
+					<dd>response body</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>array|string|object</code><br>the response parse accordingly<br />
+					<code>array|string|object</code><br>the response parse accordingly
 				</div>
+
 
 
 
@@ -277,6 +294,7 @@ array) based on the expected Mime type.</p>
 
 		<td class="attributes"><code>
 			 public 
+
 			array
 			
 			</code>
@@ -284,30 +302,29 @@ array) based on the expected Mime type.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#__parseHeaders">#</a>
-		<code><a href="source-class-Httpful.Response.html#106" title="Go to source code">_parseHeaders</a>( <span>string <var>$headers</var></span> )</code>
+		<code><a href="source-class-Httpful.Response.html#110-136" title="Go to source code">_parseHeaders</a>( <span>string <var>$headers</var></span> )</code>
 
 		<div class="description short">
-			
-<p>Parse text headers from response into array of key value pairs</p>
-
+			<p>Parse text headers from response into
+array of key value pairs</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
-<p>Parse text headers from response into array of key value pairs</p>
-
+			<p>Parse text headers from response into
+array of key value pairs</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$headers</var></dt>
-					<dd><code>string</code><br> raw headers</dd>
+					<dd>raw headers</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>array</code><br>parse headers<br />
+					<code>array</code><br>parse headers
 				</div>
+
 
 
 
@@ -318,6 +335,7 @@ array) based on the expected Mime type.</p>
 
 		<td class="attributes"><code>
 			 public 
+
 			
 			
 			</code>
@@ -325,7 +343,7 @@ array) based on the expected Mime type.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#__parseCode">#</a>
-		<code><a href="source-class-Httpful.Response.html#134" title="Go to source code">_parseCode</a>( <span> <var>$headers</var></span> )</code>
+		<code><a href="source-class-Httpful.Response.html#138-147" title="Go to source code">_parseCode</a>( <span> <var>$headers</var></span> )</code>
 
 		<div class="description short">
 			
@@ -333,6 +351,7 @@ array) based on the expected Mime type.</p>
 
 		<div class="description detailed hidden">
 			
+
 
 
 
@@ -346,6 +365,7 @@ array) based on the expected Mime type.</p>
 
 		<td class="attributes"><code>
 			 public 
+
 			
 			
 			</code>
@@ -353,19 +373,16 @@ array) based on the expected Mime type.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#__interpretHeaders">#</a>
-		<code><a href="source-class-Httpful.Response.html#143" title="Go to source code">_interpretHeaders</a>( )</code>
+		<code><a href="source-class-Httpful.Response.html#149-186" title="Go to source code">_interpretHeaders</a>( )</code>
 
 		<div class="description short">
-			
-<p>After we've parse the headers, let's clean things up a bit and treat some
-headers specially</p>
-
+			<p>After we've parse the headers, let's clean things
+up a bit and treat some headers specially</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
-<p>After we've parse the headers, let's clean things up a bit and treat some
-headers specially</p>
+			<p>After we've parse the headers, let's clean things
+up a bit and treat some headers specially</p>
 
 
 
@@ -380,6 +397,7 @@ headers specially</p>
 
 		<td class="attributes"><code>
 			 public 
+
 			string
 			
 			</code>
@@ -387,7 +405,7 @@ headers specially</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___toString">#</a>
-		<code><a href="source-class-Httpful.Response.html#182" title="Go to source code">__toString</a>( )</code>
+		<code><a href="source-class-Httpful.Response.html#188-194" title="Go to source code">__toString</a>( )</code>
 
 		<div class="description short">
 			
@@ -400,8 +418,9 @@ headers specially</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>string</code><br />
+					<code>string</code>
 				</div>
+
 
 
 
@@ -416,21 +435,21 @@ headers specially</p>
 
 
 
-	<table class="summary" id="properties">
+
+
+
+
+
+	<table class="summary properties" id="properties">
 	<caption>Properties summary</caption>
 	<tr data-order="body" id="$body">
-
 		<td class="attributes"><code>
-			public 
+			public  
 			
 		</code></td>
 
 		<td class="name">
 				<a href="source-class-Httpful.Response.html#13" title="Go to source code"><var>$body</var></a>
-		</td>
-		<td class="value"><code></code></td>
-		<td class="description"><div>
-			<a href="#$body" class="anchor">#</a>
 
 			<div class="description short">
 				
@@ -440,21 +459,22 @@ headers specially</p>
 				
 
 			</div>
-		</div></td>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$body" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
 	</tr>
 	<tr data-order="raw_body" id="$raw_body">
-
 		<td class="attributes"><code>
-			public 
+			public  
 			
 		</code></td>
 
 		<td class="name">
 				<a href="source-class-Httpful.Response.html#14" title="Go to source code"><var>$raw_body</var></a>
-		</td>
-		<td class="value"><code></code></td>
-		<td class="description"><div>
-			<a href="#$raw_body" class="anchor">#</a>
 
 			<div class="description short">
 				
@@ -464,21 +484,22 @@ headers specially</p>
 				
 
 			</div>
-		</div></td>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$raw_body" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
 	</tr>
 	<tr data-order="headers" id="$headers">
-
 		<td class="attributes"><code>
-			public 
+			public  
 			
 		</code></td>
 
 		<td class="name">
 				<a href="source-class-Httpful.Response.html#15" title="Go to source code"><var>$headers</var></a>
-		</td>
-		<td class="value"><code></code></td>
-		<td class="description"><div>
-			<a href="#$headers" class="anchor">#</a>
 
 			<div class="description short">
 				
@@ -488,21 +509,22 @@ headers specially</p>
 				
 
 			</div>
-		</div></td>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$headers" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
 	</tr>
 	<tr data-order="raw_headers" id="$raw_headers">
-
 		<td class="attributes"><code>
-			public 
+			public  
 			
 		</code></td>
 
 		<td class="name">
 				<a href="source-class-Httpful.Response.html#16" title="Go to source code"><var>$raw_headers</var></a>
-		</td>
-		<td class="value"><code></code></td>
-		<td class="description"><div>
-			<a href="#$raw_headers" class="anchor">#</a>
 
 			<div class="description short">
 				
@@ -512,21 +534,22 @@ headers specially</p>
 				
 
 			</div>
-		</div></td>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$raw_headers" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
 	</tr>
 	<tr data-order="request" id="$request">
-
 		<td class="attributes"><code>
-			public 
+			public  
 			
 		</code></td>
 
 		<td class="name">
 				<a href="source-class-Httpful.Response.html#17" title="Go to source code"><var>$request</var></a>
-		</td>
-		<td class="value"><code></code></td>
-		<td class="description"><div>
-			<a href="#$request" class="anchor">#</a>
 
 			<div class="description short">
 				
@@ -536,21 +559,22 @@ headers specially</p>
 				
 
 			</div>
-		</div></td>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$request" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
 	</tr>
 	<tr data-order="code" id="$code">
-
 		<td class="attributes"><code>
-			public 
+			public  
 			integer
 		</code></td>
 
 		<td class="name">
 				<a href="source-class-Httpful.Response.html#18" title="Go to source code"><var>$code</var></a>
-		</td>
-		<td class="value"><code><span class="php-num">0</span></code></td>
-		<td class="description"><div>
-			<a href="#$code" class="anchor">#</a>
 
 			<div class="description short">
 				
@@ -560,21 +584,22 @@ headers specially</p>
 				
 
 			</div>
-		</div></td>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$code" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
 	</tr>
 	<tr data-order="content_type" id="$content_type">
-
 		<td class="attributes"><code>
-			public 
+			public  
 			
 		</code></td>
 
 		<td class="name">
 				<a href="source-class-Httpful.Response.html#19" title="Go to source code"><var>$content_type</var></a>
-		</td>
-		<td class="value"><code></code></td>
-		<td class="description"><div>
-			<a href="#$content_type" class="anchor">#</a>
 
 			<div class="description short">
 				
@@ -584,21 +609,22 @@ headers specially</p>
 				
 
 			</div>
-		</div></td>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$content_type" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
 	</tr>
 	<tr data-order="parent_type" id="$parent_type">
-
 		<td class="attributes"><code>
-			public 
+			public  
 			
 		</code></td>
 
 		<td class="name">
 				<a href="source-class-Httpful.Response.html#20" title="Go to source code"><var>$parent_type</var></a>
-		</td>
-		<td class="value"><code></code></td>
-		<td class="description"><div>
-			<a href="#$parent_type" class="anchor">#</a>
 
 			<div class="description short">
 				
@@ -608,21 +634,22 @@ headers specially</p>
 				
 
 			</div>
-		</div></td>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$parent_type" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
 	</tr>
 	<tr data-order="charset" id="$charset">
-
 		<td class="attributes"><code>
-			public 
+			public  
 			
 		</code></td>
 
 		<td class="name">
 				<a href="source-class-Httpful.Response.html#21" title="Go to source code"><var>$charset</var></a>
-		</td>
-		<td class="value"><code></code></td>
-		<td class="description"><div>
-			<a href="#$charset" class="anchor">#</a>
 
 			<div class="description short">
 				
@@ -632,21 +659,47 @@ headers specially</p>
 				
 
 			</div>
-		</div></td>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$charset" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="meta_data" id="$meta_data">
+		<td class="attributes"><code>
+			public  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Httpful.Response.html#22" title="Go to source code"><var>$meta_data</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$meta_data" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
 	</tr>
 	<tr data-order="is_mime_vendor_specific" id="$is_mime_vendor_specific">
-
 		<td class="attributes"><code>
-			public 
+			public  
 			boolean
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Response.html#22" title="Go to source code"><var>$is_mime_vendor_specific</var></a>
-		</td>
-		<td class="value"><code><span class="php-keyword1">false</span></code></td>
-		<td class="description"><div>
-			<a href="#$is_mime_vendor_specific" class="anchor">#</a>
+				<a href="source-class-Httpful.Response.html#23" title="Go to source code"><var>$is_mime_vendor_specific</var></a>
 
 			<div class="description short">
 				
@@ -656,21 +709,22 @@ headers specially</p>
 				
 
 			</div>
-		</div></td>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$is_mime_vendor_specific" class="anchor">#</a>
+				<code><span class="php-keyword1">false</span></code>
+			</div>
+		</td>
 	</tr>
 	<tr data-order="is_mime_personal" id="$is_mime_personal">
-
 		<td class="attributes"><code>
-			public 
+			public  
 			boolean
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Httpful.Response.html#23" title="Go to source code"><var>$is_mime_personal</var></a>
-		</td>
-		<td class="value"><code><span class="php-keyword1">false</span></code></td>
-		<td class="description"><div>
-			<a href="#$is_mime_personal" class="anchor">#</a>
+				<a href="source-class-Httpful.Response.html#24" title="Go to source code"><var>$is_mime_personal</var></a>
 
 			<div class="description short">
 				
@@ -680,18 +734,29 @@ headers specially</p>
 				
 
 			</div>
-		</div></td>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$is_mime_personal" class="anchor">#</a>
+				<code><span class="php-keyword1">false</span></code>
+			</div>
+		</td>
 	</tr>
 	</table>
+
+
+
 
 
 
 </div>
 
 	<div id="footer">
-		 API documentation generated by <a href="http://apigen.org">ApiGen 2.6.1</a>
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>
