@@ -60,17 +60,19 @@
                 </ul>
             </p>
             <p class="note">
-                Here's a quick snippet to whet your appetite.  Search the Twitter API.
+                Here's a quick snippet to whet your appetite.  Find a user in the GitHub API.
             </p>
             <pre class="brush:php">
-                $url = "http://search.twitter.com/search.json?q=" . urlencode('#PHP');
+                // Make a request to the GitHub API with a custom
+                // header of "X-Trvial-Header: Just as a demo".
+                $url = "https://api.github.com/users/nategood";
                 $response = \Httpful\Request::get($url)
+                    ->expectsJson()
                     ->withXTrivialHeader('Just as a demo')
                     ->send();
 
-                foreach ($response->body->results as $tweet) {
-                    echo "@{$tweet->from_user} tweets \"{$tweet->text}\"\n";
-                }
+                echo "{$response->body->name} joined GitHub on " .
+                                        date('M jS', strtotime($response->body->created_at)) ."\n";
             </pre>
             <p class="note">
                 Note the chaining, the albeit trivial custom header (for the sake of demoing), and the automatic parsing based on Content-Type of response.
@@ -141,15 +143,13 @@
                 </p>
 
                 <pre class="brush: php">
-                    // Get GitHub Profile for nategood as XML
-                    $uri = 'https://github.com/api/v2/xml/user/show/nategood';
+                    $uri = 'https://example.net/person.xml';
 
-                    $response = \Httpful\Request::get($uri)  // Will parse based on Content-Type
-                        ->expectsXml()              // from the response, but can specify
-                        ->send();                   // how to parse via expectsXml too.
+                    $response = \Httpful\Request::get($uri)
+                        ->expectsXml()
+                        ->send();
 
-                    echo "{$request->body->name} joined GitHub on " .
-                        date('M jS', strtotime($request->body->{'created-at'})) ."\n";
+                    echo "Name: $response->body->name";
                 </pre>
             </div>
 
