@@ -242,6 +242,13 @@
                         ->send();
 
                     echo "This response had " . count($response) . " values separated via commas";
+
+                    // Or handle a gunzip encoded response.
+                    $response = \Httpful\Request::get($url)
+                        ->parseWith(function($body) {
+                                return gzdecode($body);
+                        })
+                        ->send();
                 </pre>
             </div>
 
