@@ -198,7 +198,7 @@
                     $passphrase = 'for-your-key-if-needed';
 
                     $response = \Httpful\Request::get($uri)
-                        ->authenticateWithCert($cert, $key, $passphrase)
+                        ->authenticateWithCert($crt, $key, $passphrase)
                         ->send();
                 </pre>
             </div>
