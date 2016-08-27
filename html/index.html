@@ -197,7 +197,7 @@
                     $crt        = '/path/to/client/crt.pem';
                     $passphrase = 'for-your-key-if-needed';
 
-                    $response = \Httpful\Request::get($uri)
+                    $response = \Httpful\Request::delete($uri)
                         ->authenticateWithCert($cert, $key, $passphrase)
                         ->send();
                 </pre>
