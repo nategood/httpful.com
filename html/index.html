@@ -267,7 +267,7 @@
                         ->method(Http::POST)        // Alternative to Request::post
                         ->withoutStrictSsl()        // Ease up on some of the SSL checks
                         ->expectsHtml()             // Expect HTML responses
-                        ->sendsType(Mime::FORM);    // Send application/x-www-form-urlencoded
+                        ->sendsType(\Httpful\Mime::FORM);    // Send application/x-www-form-urlencoded
 
                     // Set it as a template
                     Request::ini($template);
