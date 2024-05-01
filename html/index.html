@@ -34,7 +34,7 @@
                     <li class="sig"><a href="#h">Httpful</a></li>
                     <li class="sig"><a href="#install">Install</a></li>
                     <li class="sig"><a href="https://github.com/nategood/httpful">GitHub</a></li>
-                    <li class="sig"><a href="/docs">Documentation</a></li>
+<!--                     <li class="sig"><a href="/docs">Documentation</a></li> -->
                     <li class="header">Examples</li>
                     <li><a href="#json">GET JSON</a></li>
                     <li><a href="#xml">GET XML</a></li>
@@ -79,36 +79,14 @@
             </p>
 
             <div class="example" id="install">
-                <h2>Install Option 1: Phar</h2>
+                <h2>Install</h2>
                 <p>
-                    IDEAL FOR: Quick hacking or small projects
-                </p>
-                <p class="note">
-                    Httpful provides a <a href="/downloads/httpful.phar">PHP Archive file</a> that includes the entire library.  Simply <a href="/downloads/httpful.phar">download this file</a> and <code>include</code> it in your code.
-                </p>
-                <pre class="brush: php">
-                    &lt;?php
-                    // Point to where you downloaded the phar
-                    include('./httpful.phar');
-
-                    // And you're ready to go!
-                    $response = \Httpful\Request::get('http://example.com')->send();
-                    ...
-                </pre>
-            </div>
-
-            <div class="example">
-                <h2>Install Option 2: Composer</h2>
-                <p>
-                    IDEAL FOR: Projects that already support <a href="http://getcomposer.org">Composer</a>, the sane alternative to PEAR.
-                </p>
-                <p class="note">
-                    <a href="http://getcomposer.org">Composer</a> is starting to emerge as the true people's package manager for PHP.  If you aren't already using it, you should give it a shot.  Simply add <code>nategood/httpful</code> to <code>require</code> in your <code>composer.json</code> file like below.  After doing so, you're all set to start using Httpful!  The autoloader provided by composer takes care of the rest!
+                    Httpful uses PHP's package manager, <a href="http://getcomposer.org">Composer</a>. The package is available on <a href="https://packagist.org/packages/nategood/httpful">Packagist</a>.
                 </p>
                 <pre class="brush: javascript">
                     {
                         "require": {
-                            "nategood/httpful": "*"
+                            "nategood/httpful": "^1.0"
                         }
                     }
                 </pre>
@@ -287,19 +265,5 @@
             $("#h").lettering();
             SyntaxHighlighter.all();
         </script>
-
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-29614320-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
     </body>
 </html>
